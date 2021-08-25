@@ -1,0 +1,4 @@
+-D LANGUAGE=en_us
+-D MESSAGESTYLE=neu
+-lib system
+-lib adv3/adv3
