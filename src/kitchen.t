@@ -1,5 +1,5 @@
 /*
- * staging.t
+ * kitchen.t
  */
 
 #include <tads.h>
@@ -12,9 +12,9 @@ gameMain: GameMainDef
 versionInfo: GameID
 ;
 
-stagingArea: Room 'Staging Area'
+kitchen: Room 'Kitchen'
 ;
 
 me: Actor
-  location = stagingArea
+  location = kitchen
 ;

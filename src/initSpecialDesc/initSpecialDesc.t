@@ -3,9 +3,9 @@
  * Jim Nelson
  */
 
-#include <staging.t>
+#include <kitchen.t>
 
-MagicWand: Thing 'a magic wand' 'magic wand' @stagingArea
+MagicWand: Thing 'a magic wand' 'magic wand' @kitchen
   "A boring magic wand.  "
   initSpecialDesc = "A gleaming magic wand is here.  "
 ;
