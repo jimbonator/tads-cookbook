@@ -5,8 +5,7 @@
 
 #include <kitchen.t>
 
-// DON'T DO THIS
-/*
+/********** DON'T DO THIS ****************
 pushMe: Button 'a button' 'button' @kitchen
   isOn = nil
   dobjFor(Push) {
@@ -17,8 +16,9 @@ pushMe: Button 'a button' 'button' @kitchen
     }
   }
 ;
-*/
+******************************************/
 
+/* DO THIS: */
 pushMe: Button 'a button' 'button' @kitchen
   desc {
     if (isOn)
