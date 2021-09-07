@@ -1,0 +1,4 @@
+-D LANGUAGE=english
+-D MESSAGESTYLE=neu
+-lib system
+-lib adv3Lite/adv3Lite
