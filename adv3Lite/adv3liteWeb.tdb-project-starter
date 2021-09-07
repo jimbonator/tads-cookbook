@@ -1,0 +1,9 @@
+name: Adv3lite - WebUI
+desc: Create a WebUI game based on the Adv3Lite library, i.e.
+  an Adv3Lite game to be played in a web browser.
+source: template\start.t $.t
+lib: adv3LiteWeb.tl
+sysfile: webui.tl
+sysfile: tadsnet.t
+define: TADS_INCLUDE_NET
+define: LANGUAGE=english
