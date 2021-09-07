@@ -1,5 +1,5 @@
 /*
- * DecorationFixture
+ * DecorationFixtureImmovable
  * Jim Nelson
  */
 
