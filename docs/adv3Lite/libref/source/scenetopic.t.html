@@ -1,0 +1,125 @@
+<html><head><link rel=stylesheet type="text/css" href="../libref.css"><title>scenetopic.t</title></head><body>
+<table class=ban><tr><td><h1>scenetopic.t</h1><td align=right><a href="../file/scenetopic.t.html">documentation</a></table><pre>
+<a name="1"></a>#charset "us-ascii"
+<a name="2"></a>#include "advlite.h"
+<a name="3"></a>
+<a name="4"></a>/* SceneTopic Extension, based on work by D.Smith */
+<a name="5"></a>
+<a name="6"></a>/* Modifications to Scene for the SCENETOPIC EXTENSION */
+<a name="7"></a>modify Scene
+<a name="8"></a>    /* Modified for SceneTopic Extension */
+<a name="9"></a>    end()
+<a name="10"></a>    { 
+<a name="11"></a>        /* Carry out the inherited handling */
+<a name="12"></a>        inherited();
+<a name="13"></a>        
+<a name="14"></a>        /* Notify any actor that we can talk to that this scene had ended */
+<a name="15"></a>        notifyActors(&amp;sceneEndTopics);
+<a name="16"></a>    }
+<a name="17"></a>    
+<a name="18"></a>    /*  Modified for SceneTopic Extension */
+<a name="19"></a>    start()    
+<a name="20"></a>    {
+<a name="21"></a>        /* Carry out the inherited handling */     
+<a name="22"></a>        inherited();
+<a name="23"></a>        
+<a name="24"></a>         /* Notify any actor that we can talk to that this scene had started */
+<a name="25"></a>        notifyActors(&amp;sceneStartTopics);
+<a name="26"></a>    }
+<a name="27"></a>    
+<a name="28"></a>    notifyActors(prop)
+<a name="29"></a>    {
+<a name="30"></a>        /* Set up a new vector */
+<a name="31"></a>        local vec = new Vector;
+<a name="32"></a>        
+<a name="33"></a>        /* 
+<a name="34"></a>         *   Loop through every actor in the game, adding every actor that
+<a name="35"></a>         *   gPlayerChar can talk to to our vector.
+<a name="36"></a>         */
+<a name="37"></a>        forEachInstance(Actor, function(a) {
+<a name="38"></a>            if(gPlayerChar.canTalkTo(a))
+<a name="39"></a>                vec.append(a);            
+<a name="40"></a>        });
+<a name="41"></a>        
+<a name="42"></a>        /* Remove the player char from the list of actors to notify */
+<a name="43"></a>        vec -= gPlayerChar;
+<a name="44"></a>        
+<a name="45"></a>        /* Sort the list in ascending order of notificationOrder */
+<a name="46"></a>        vec.sort(SortAsc, {a, b: a.notificationOrder - b.notificationOrder} );
+<a name="47"></a>        
+<a name="48"></a>        /* Notify each actor in the resultant list. */
+<a name="49"></a>        foreach(local cur in vec)
+<a name="50"></a>        {           
+<a name="51"></a>            /* 
+<a name="52"></a>             *   If we only want one actor to respond, stop here if the current
+<a name="53"></a>             *   actor's handleTopic method returns true to show that a
+<a name="54"></a>             *   SceneTopic was matched.
+<a name="55"></a>             */
+<a name="56"></a>            if(cur.handleTopic(prop, [self], nil) &amp;&amp; notifySingleActor)
+<a name="57"></a>                break;
+<a name="58"></a>        }
+<a name="59"></a>    }
+<a name="60"></a>    
+<a name="61"></a>    /* 
+<a name="62"></a>     *   Flag (for use with SceneTopic extension): do we want to trigger a
+<a name="63"></a>     *   SceneTopic response from every actor the player char can talk to, or
+<a name="64"></a>     *   only the first one we find? By default we assume we want a response
+<a name="65"></a>     *   from only one actor. Note that the Actor notificationOrder property can
+<a name="66"></a>     *   be defined so that we can select which Actor this will be (the one with
+<a name="67"></a>     *   the lowest notificationOrder).
+<a name="68"></a>     */
+<a name="69"></a>    notifySingleActor = true
+<a name="70"></a>;
+<a name="71"></a>
+<a name="72"></a>
+<a name="73"></a>/* Modifications to ActorTopicDatabase for SceneTopic extension */
+<a name="74"></a>modify ActorTopicDatabase
+<a name="75"></a>    sceneStartTopics = []
+<a name="76"></a>    sceneEndTopics = []
+<a name="77"></a>;
+<a name="78"></a>
+<a name="79"></a>/* 
+<a name="80"></a> *   The SceneTopic class (defined in the scenetopic extension) is the base
+<a name="81"></a> *   class
+<a name="82"></a> */
+<a name="83"></a>class SceneTopic: ActorTopicEntry
+<a name="84"></a>    handleTopic()
+<a name="85"></a>    {
+<a name="86"></a>        beforeResponse();
+<a name="87"></a>        inherited;
+<a name="88"></a>        afterResponse();
+<a name="89"></a>    }
+<a name="90"></a>    
+<a name="91"></a>    /* By default, we just dislpay a spacing paragraph break */
+<a name="92"></a>    beforeResponse()
+<a name="93"></a>    {
+<a name="94"></a>        "&lt;.p&gt;";       
+<a name="95"></a>    }
+<a name="96"></a>    
+<a name="97"></a>    /* By default we do nothing here, but game code can override. */
+<a name="98"></a>    afterResponse()
+<a name="99"></a>    {        
+<a name="100"></a>    }
+<a name="101"></a>    
+<a name="102"></a>;
+<a name="103"></a>
+<a name="104"></a>/* 
+<a name="105"></a> *   A SceneEndTopic is a topic entry that is triggered when any of the scenes
+<a name="106"></a> *   in its matchObj property ends.
+<a name="107"></a> */
+<a name="108"></a>class SceneEndTopic: SceneTopic
+<a name="109"></a>    includeInList = [&amp;sceneEndTopics]
+<a name="110"></a>;
+<a name="111"></a>
+<a name="112"></a>
+<a name="113"></a>/* 
+<a name="114"></a> *   A SceneStartTopic is a topic entry that is triggered when any of the scenes
+<a name="115"></a> *   in its matchObj property starts.
+<a name="116"></a> */
+<a name="117"></a>class SceneStartTopic: SceneTopic
+<a name="118"></a>    includeInList = [&amp;sceneStartTopics]
+<a name="119"></a>;
+</pre>
+<div class=ftr>Adv3Lite Library Reference Manual<br>Generated on 12/09/2014 from adv3Lite version 1.4</div>
+</body>
+</html>

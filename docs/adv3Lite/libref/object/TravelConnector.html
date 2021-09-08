@@ -1,0 +1,139 @@
+<html>
+<head><link rel=stylesheet type="text/css" href="../libref.css"><title>TravelConnector</title></head><body>
+<table class=ban><tr><td align=left><span class=title>TravelConnector</span><span class=type>class</span><td align=right><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#989">989</a>]</table><p>
+<table class=nav><tr>
+<td><a href="#_SuperClassTree_">Superclass<br>Tree</a>
+<td><a href="#_SubClassTree_">Subclass<br>Tree</a>
+<td><a href="#_ObjectSummary_">Global<br>Objects</a>
+<td><a href="#_PropSummary_">Property<br>Summary</a>
+<td><a href="#_MethodSummary_">Method<br>Summary</a>
+<td><a href="#_Properties_">Property<br>Details</a>
+<td><a href="#_Methods_">Method<br>Details</a>
+</table><div class=fdesc>
+   A TravelConnector is an object that can be attached to the directional   exit property of a room to facilitate (or optionally block) travel in the   associated direction and carry out any side-effects of that travel. A   TravelConnector may be used as an abstract object to implement travel, or   a subclass of TravelConnector such as Door, Passage, StairwayUp or   StairwayDown may be used to represent a physical object via which travel   occurs. The Room class also inherits from TravelConnector. <p>   Whether the base TravelConnector class or one of its subclasses is used,   travel is carried out via a TravelConnector by calling its travelVia()   method. 
+<p>
+<code>class 
+<b>TravelConnector</b> :  &nbsp; object</code>
+</div>
+<a name="_SuperClassTree_"></a><p><div class=mjhd><span class=hdln>Superclass Tree</span> &nbsp; (in declaration order)</div><p>
+<code><b>TravelConnector</b></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp; object</code><br>
+<a name="_SubClassTree_"></a><p><div class=mjhd><span class=hdln>Subclass Tree</span> &nbsp; </div><p>
+<code><b>TravelConnector</b></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp; <a href="../object/Door.html">Door</a></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; <a href="../object/SecretDoor.html">SecretDoor</a></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp; <a href="../object/Passage.html">Passage</a></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; <a href="../object/PathPassage.html">PathPassage</a></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp; <a href="../object/Room.html">Room</a></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp; <a href="../object/StairwayDown.html">StairwayDown</a></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp; <a href="../object/StairwayUp.html">StairwayUp</a></code><br>
+<code> &nbsp; &nbsp; &nbsp; &nbsp; <a href="../object/UnlistedProxyConnector.html">UnlistedProxyConnector</a></code><br>
+<a name="_ObjectSummary_"></a><p><div class=mjhd><span class=hdln>Global Objects</span> &nbsp; </div><p>
+<i>(none)</i>
+<a name="_PropSummary_"></a><p><div class=mjhd><span class=hdln>Summary of Properties</span> &nbsp; </div><p>
+<code>
+<a href="#destination">destination</a>&nbsp; 
+<a href="#isConnectorApparent">isConnectorApparent</a>&nbsp; 
+<a href="#isConnectorListed">isConnectorListed</a>&nbsp; 
+<a href="#isOpen">isOpen</a>&nbsp; 
+<a href="#transmitsLight">transmitsLight</a>&nbsp; 
+<a href="#travelBarriers">travelBarriers</a>&nbsp; 
+</code><p>
+<a name="_MethodSummary_"></a><p><div class=mjhd><span class=hdln>Summary of Methods</span> &nbsp; </div><p>
+<code>
+<a href="#afterTravelNotifications">afterTravelNotifications</a>&nbsp; 
+<a href="#beforeTravelNotifications">beforeTravelNotifications</a>&nbsp; 
+<a href="#canTravelerPass">canTravelerPass</a>&nbsp; 
+<a href="#checkTravelBarriers">checkTravelBarriers</a>&nbsp; 
+<a href="#execTravel">execTravel</a>&nbsp; 
+<a href="#explainTravelBarrier">explainTravelBarrier</a>&nbsp; 
+<a href="#getDepartingDirection">getDepartingDirection</a>&nbsp; 
+<a href="#getDestination">getDestination</a>&nbsp; 
+<a href="#getTraveler">getTraveler</a>&nbsp; 
+<a href="#isConnectorVisible">isConnectorVisible</a>&nbsp; 
+<a href="#isDestinationKnown">isDestinationKnown</a>&nbsp; 
+<a href="#noteTraversal">noteTraversal</a>&nbsp; 
+<a href="#sayActorFollowing">sayActorFollowing</a>&nbsp; 
+<a href="#sayDeparting">sayDeparting</a>&nbsp; 
+<a href="#sayNoDestination">sayNoDestination</a>&nbsp; 
+<a href="#travelDesc">travelDesc</a>&nbsp; 
+<a href="#travelVia">travelVia</a>&nbsp; 
+<a href="#traversalMsg">traversalMsg</a>&nbsp; 
+</code><p>
+<a name="_Properties_"></a><p><div class=mjhd><span class=hdln>Properties</span> &nbsp; </div><p>
+<a name="destination"></a>
+<table class=decl><tr><td><code>destination</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1028">1028</a>]</table><div class=desc>The room to which this TravelConnector leads when it is traversed<p>
+</div>
+<a name="isConnectorApparent"></a>
+<table class=decl><tr><td><code>isConnectorApparent</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#997">997</a>]</table><div class=desc>   Is this connector apparent? That is, would it be apparent to an   observer under normal lighting conditions, as opposed to being   concealed? By default we'll suppose a TravelConnector is apparent   unless it's explicitly hidden. <p>
+</div>
+<a name="isConnectorListed"></a>
+<table class=decl><tr><td><code>isConnectorListed</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1003">1003</a>]</table><div class=desc>   Should this exit be shown in the exit lister? By default we'll assumed   it should be it it's visible. <p>
+</div>
+<a name="isOpen"></a>
+<table class=decl><tr><td><code>isOpen</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1053">1053</a>]</table><div class=desc>A travel connector is usually open.<p>
+</div>
+<a name="transmitsLight"></a>
+<table class=decl><tr><td><code>transmitsLight</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1009">1009</a>]</table><div class=desc>   Does light pass through this TravelConnector from its destination (so   that it's visible in the dark even its location is dark.). <p>
+</div>
+<a name="travelBarriers"></a>
+<table class=decl><tr><td><code>travelBarriers</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1232">1232</a>]</table><div class=desc>   an additional TravelBarrier or a list of TravelBarriers to check on   this TravelConnector to see if travel is allowed. <p>
+</div>
+<a name="_Methods_"></a><p><div class=mjhd><span class=hdln>Methods</span> &nbsp; </div><p>
+<a name="afterTravelNotifications"></a>
+<table class=decl><tr><td><code>afterTravelNotifications (actor)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1181">1181</a>]</table><div class=desc>Carry out the after travel notifications for this actor<p>
+</div>
+<a name="beforeTravelNotifications"></a>
+<table class=decl><tr><td><code>beforeTravelNotifications (actor)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1162">1162</a>]</table><div class=desc>Carry out the before travel notifications for this actor.<p>
+</div>
+<a name="canTravelerPass"></a>
+<table class=decl><tr><td><code>canTravelerPass (actor)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1205">1205</a>]</table><div class=desc>   Method that should return true is actor is allowed to pass through this   TravelConnector and nil otherwise. We allow travel by default but this   could be overridden to block travel under certain conditions. <p>
+</div>
+<a name="checkTravelBarriers"></a>
+<table class=decl><tr><td><code>checkTravelBarriers (traveler)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1240">1240</a>]</table><div class=desc>   Check all the travel barriers associated with this connector to   determine whether the traveler is allowed to pass through this travel   connector. <p>
+</div>
+<a name="execTravel"></a>
+<table class=decl><tr><td><code>execTravel (actor, traveler, conn)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1103">1103</a>]</table><div class=desc>Execute the travel for this actor via this connector<p>
+</div>
+<a name="explainTravelBarrier"></a>
+<table class=decl><tr><td><code>explainTravelBarrier (actor)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1212">1212</a>]</table><div class=desc>   If canTravelerPass returns nil explainTravelBarrier should display a   message explaining why travel has been prohibited. <p>
+</div>
+<a name="getDepartingDirection"></a>
+<table class=decl><tr><td><code>getDepartingDirection (traveler)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1327">1327</a>]</table><div class=desc>   Get the direction traveler needs to go in to traverse this connector   from traveler's current location. <p>
+</div>
+<a name="getDestination"></a>
+<table class=decl><tr><td><code>getDestination (origin)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1034">1034</a>]</table><div class=desc>   The room to which this TravelConnector leads when it is traversed from   origin. <p>
+</div>
+<a name="getTraveler"></a>
+<table class=decl><tr><td><code>getTraveler (actor)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1085">1085</a>]</table><div class=desc>   Get the traveler associated with this actor. Normally the traveler will   be the same as the actor, but if the actor is in a vehicle, then the   traveler will be the vehicle. <p>
+</div>
+<a name="isConnectorVisible"></a>
+<table class=decl><tr><td><code>isConnectorVisible ( )</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1016">1016</a>]</table><div class=desc>   A TravelConnector (or at least, the exit it represents) is visible if   it's apparent (i.e. not concealed in some way) and if the lighting   conditions are adequate, or if it's visible in the dark. <p>
+</div>
+<a name="isDestinationKnown"></a>
+<table class=decl><tr><td><code>isDestinationKnown ( )</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1045">1045</a>]</table><div class=desc>   Does the player char know where this travel connector leads? By default   s/he doesn't until s/he's visited its destination, but this could be   overridden for an area the PC is supposed to know well when the game   starts, such as their own house. <p>
+</div>
+<a name="noteTraversal"></a>
+<table class=decl><tr><td><code>noteTraversal (actor)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1151">1151</a>]</table><div class=desc>   If the actor doing the traveling is the player character, display the   travelDesc. Note that although this might normally be a simple   description of the travel, the travelDesc method could also be used to   carry out any other side-effects of the travel via this connector. <p>
+</div>
+<a name="sayActorFollowing"></a>
+<table class=decl><tr><td><code>sayActorFollowing (follower, leader)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1294">1294</a>]</table><div class=desc>   Display a message to say that follower is following leader in the   direction of this connector. <p>
+</div>
+<a name="sayDeparting"></a>
+<table class=decl><tr><td><code>sayDeparting (traveler)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1273">1273</a>]</table><div class=desc>   Display a message to say that an actor is departing via this connector.   On the base class the default behaviour is to describe the departure   via a compass direction. The actor in question would normally be an NPC   visible to the player character. <p>
+</div>
+<a name="sayNoDestination"></a>
+<table class=decl><tr><td><code>sayNoDestination ( )</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1138">1138</a>]</table><div class=desc>   Display a message saying that this travel connector doesn't actually   lead anywhere; this may be needed if our destination is nil and our   noteTraversal() method doesn't display anything. <p>
+</div>
+<a name="travelDesc"></a>
+<table class=decl><tr><td><code>travelDesc ( )</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1222">1222</a>]</table><div class=desc>   Carry out any side effects of travel if the traveler is the player   character. Typically we might just display some text describing the   travel here, but this method could be used for any side-effects of the   travel. If the TravelConnector is mixed in with an EventList class then   the default behaviour is to call the doScript() method here to drive   the EventList. <p>
+</div>
+<a name="travelVia"></a>
+<table class=decl><tr><td><code>travelVia (actor)</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1059">1059</a>]</table><div class=desc>   Carrier out travel via this connector, first checking that travel   through this connector is permitted for this actor. <p>
+</div>
+<a name="traversalMsg"></a>
+<table class=decl><tr><td><code>traversalMsg ( )</code><td align=right><code><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1315">1315</a>]</table><div class=desc>   Create a phrase describing the direction of travel through this   connector (e.g. 'to the north') <p>
+</div>
+<div class=ftr>Adv3Lite Library Reference Manual<br>Generated on 28/03/2016 from adv3Lite version 1.5</div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Optional Modules &mdash; Extras</title>
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="optional.htm">Optional Modules</a> &gt; 
+Extras
+<br><span class="navnp"><a class="nav" href="eventlist.htm"><i>Prev:</i> Exits</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="gadget.htm"><i>Next:</i> Gadgets</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+<h1>Extras</h1>
+<p>The adv3Lite library has been devised to minimize the number of classes a game author has to remember, so that a huge number of game objects can simply be defined as belonging to the Thing class. That may suit some game authors but not all. Authors used to the adv3 library may prefer to use the classes they are familiar with from there. Also, while using a greater number of classes means you have to remember more initially, it may make your code more readable in the long term, since assigning an object to an appropriate class may make it more immediately obvious what its function is.</p>
+
+<p>To give game authors the choice of using a larger array of classes if they so wish, the extras.t module defines a number of classes that work more or less the same as the similarly named classes in adv3. Note that the 'shallow' classes add little or no real functionality to the adv3Lite library, however, since in most cases they simply define one or two properties that game authors could equally well define for themselves on Thing. There are, however, one or two classes in the extras.t module that do a little more than that (particularly the TravelConnector-derived classes), and it will usually prove better to make use of these 'deeper' classes than attempting to roll your own on Thing if you want their full functionality.</p>
+
+<a name="shallow"></a><h2>Shallow Equivalents to adv3 Classes</h2>
+
+<p>We start with the 'shallow' classes that simply define one or two properties on Thing (well, actually one or two of them do a bit more than that, but this will do as a first approximation):</p>
+
+<ul>
+<li><b>Container</b>: Subclass of Thing with contType = In and isOpen = true.</li>
+<li><b>OpenableContainer</b>: Subclass of Container with isOpen = nil and isOpenable = true.</li>
+<li><b>LockableContainer</b>: Subclass of OpenableContainer with lockability = lockableWithoutKey.</li>
+<li><b>KeyedContainer</b>: Subclass of OpenableContainer with lockability = lockableWithKey.</li>
+<li><b>Surface</b>: Subclass of Thing with contType = On. Surface also defines specialized handling for the Search action, which reports what's ON a Surface (as well as anything in its hiddenIn list), whereas on the Thing class SEARCH simply redirects to LOOK IN.</li>
+<li><b>Platform</b>: Subclass of Surface with isBoardable = true.</li>
+<li><b>Booth</b>: Subclass of Container with isEnterable = true.</li>
+<li><b>Underside</b>: Subclass of Thing with contType = Under.</li>
+<li><b>RearContainer</b>: Subclass of Thing with contType = Behind.</li>
+<li><b>Wearable</b>: Subclass of Thing with isWearable = true.</li>
+<li><b>Food</b>: Subclass of Thing with isEdible = true.</li>
+<li><b>Fixture</b>: Subclass of Thing with isFixed = true.</li>
+<li><b>Decoration</b> Subclass of Thing with isDecoration = true.</li>
+<li><b>Distant</b>: Subclass of Decoration with a notImportantMsg that says the object is too far away. The Distant class also has a destination property for use with <a href="pathfind.htm#distant">pathfinding</a>.</li>
+<li><b>Component</b>: Subclass of Fixture with a cannotTakeMsg that says the object can't be taken as it's part of its location.</li>
+<li><b>Heavy</b>: Subclass of Fixture with a cannotTakeMsg that says the object is too heavy.</li> 
+<li><b>Switch</b>: Subclass of Thing with isSwitchable = true.</li>
+<li><b>Enterable</b>: Subclass of Fixture that can be used to represent the outside of a building or the like. The connector property can be used to define the connector (typically a Door) that the player character should travel through when the Enterable is entered, or the destination property can be used to define the room the player character is taken to on entering the Enterable.To avoid certain problems with the GO TO pathfinding command, Enterable also descends from the <a href="pathfind.htm#proxy">ProxyDest</a> class.</li>
+</ul>
+
+<p>Remember, you can use as many or as few of these classes as you wish.</p>
+<a name="travelconn"></a>
+<h2>TravelConnector Classes</h2>
+
+<p>The following classes implement one or two TravelConnector objects that are also present as physical objects in the game world:</p>
+
+<ul>
+<li><b>StairwayUp</b>: Can be used for anything the player character might climb or climb up, typically a flight of stairs leading up, but could be used for a tree, mast, ladder or 
+hillside.</li>
+<li><b>StairwayDown</b> Can be used for anything the player character might climb down.</li>
+<li><b>Passage</b>: Can be used for anything the player character might enter or go through to reach another destination.</li>
+<li><b>PathPassage</b>: Like a Passage, except that following it also traverses it.</li>
+</ul>
+
+<p>These classes work just a little differently from their adv3 equivalents, in that you don't have to use them in pairs. To use one of the above classes, put an instance in the appropriate room, set its destination property to the room you want it to lead to, and set the appropriate direction property of the room to point to it. For example, to implement a flight of stairs leading up from the hall to the landing you might write:</p>
+
+<p><div class=code><pre>
+hall: Room 'Hall'
+    "A broad flight of stairs leads up to the landing above. "
+    up = hallStairs<p></p>
+;
+
++ hallStairs 'flight[n] of stairs; broad; steps staircase'
+     destination = landing
+;
+
+</pre></div>
+
+
+
+
+<h2><a name="emanation">Sensory Emanation Classes</a></h2>
+
+<p>The adv3Lite library defines the classes <b>Noise</b> and <b>Odor</b> to represent a sound and a smell respectively. Users familiar with adv3 should note that these classes are much simpler than the adv3 classes with the same name (and are more like the adv3 SimpleNoise and SimpleOdor classes). They are simply Decoration objects that can be either listened to (for a Noise) or smelled (for an Odor), either of which is treated as the same as examining them. For anything else they respond with 'You can't do that to a noise|smell. ' Since they don't by default define smellDesc or listenDesc they won't normally respond to an intransitive SMELL or LISTEN command. They can, however, be used to provide simple implementations of any smells or sounds whose existence is suggested by smelling or listening to other objects, or by issuing an intransitive SMELL or LISTEN command. For example:</p>
+
+
+<p><div class=code><pre>
++ cooker: Thing 'cooker;blackened;oven stove top'
+    "Normally, you keep it in pretty good shape (or your cleaner does) but right
+    now it's looking suspiciously blackened, especially round the top. "    
+    
+    isFixed = true
+    isSwitchable = true
+    isOn = true
+    
+    smellDesc = "There's a distinct smell of burning from the cooker. "
+;
+
+
++ Odor 'smell of burning; acrid distinct'
+    "It smells quite acrid. "   
+;
+</pre></div>
+
+<p>If your game needs a more sophisticated handling of sounds and smells than these rather simple classes offer, you may want to consider including the <a href="../../extensions/docs/sensory.htm">Sensory</a> extension.</p>
+
+<br>
+
+<a name="misc"></a><h2>Other Miscellaneous Classes</h2>
+
+<p>The <b>Flashlight</b> is a subclass of Switch that lights up when its switched on, and goes out when its switched off. It can also be switched on and off with LIGHT and EXTINGUISH.</p>
+
+<p>An <b>Immovable</b> is like a Fixture, except that taking it is blocked in check() rather than verify(). What this is means is that although it can't be taken, this doesn't affect the parser's choice of it as the target of a TAKE command. This could be used for anything that looks like it might be possible to take, but turns out not to be takeable (perhaps because it's heavier than it looks, or it's fastened in place but not obviously so).
+
+<a name="unthing"></a>
+<p>An <strong>Unthing</strong> is an object that used to represent the <em>absence</em> of something that a player might assume to be present. The purpose of an Unthing is simply to provide a message explaining why the thing in question isn't there. For example, if the player drops a key down a drain, you could then add an Unthing to the location to remind the player why the key is 
+no longer available:</p>
+
+ <p><div class="code"><pre>
+unKey: Unthing 'small silver key'
+   'Unfortunately, you dropped the silver key down the drain. '
+;   
+</pre></div>
+
+<p>Note that the second property we're defining with the template here is not the description but the <strong>notHereMsg</strong>, and that this must be a single-quoted string. Any attempt to perform any action with an Unthing will result in the display of its notHereMsg.</p>
+
+<p>When choosing objects the parser will always prefer any other object to an Unthing. So, in the previous example, if the unKey was in scope at the same time as a large brass key, say, the parser will always choose the large brass key in respond to commands that just refer to a 'key', e.g. X KEY, TAKE KEY or UNLOCK DOOR WITH KEY.</p>
+
+<p>The Unthing class inherits from Decoration. You can make selected actions work with an Unthing by overriding is decorationActions property. E.g. if you'd defined a RETRIEVE command which you wanted to work on the UnKey (to make the player character try to fish the real silver key out of the drain, maybe), you could define your unKey thus:</p>
+
+ <p><div class="code"><pre>
+unKey: Unthing 'small silver key'
+   'Unfortunately, you dropped the silver key down the drain. '
+   
+   decorationActions = [Retrieve]
+;   
+</pre></div>
+
+<p>A <a name="collective"></a><strong>CollectiveGroup</strong> can be used to represent a collection of objects for certain actions. It's normally best used as a Fixture representing other Fixtures (see <a href="#mobile">below</a> if you need it to work with mobile objects). To use a CollectiveGroup define an object of the CollectiveGroup class in a particular location, and then the objects the CollectiveGroup represents in the same location, defining the <strong>collectiveGroups</strong> property of each of those other objects to point to the CollectiveGroup. For example, suppose we have a bank of switches comprising a red switch, a blue switch and a green switch; in outline we might do something like this:</p>
+
+<p><div class="code"><pre>
++ switchBank: CollectiveGroup 'switches; of[prep]; row bank; them'
+   "The bank comprises a row of three switches: one red, one blue, one green. "
+   collectiveActions = [Examine, Take]
+;
+
++ redSwitch: Switch 'red switch'
+    isFixed = true
+    collectiveGroups = [switchBank]
+;
+
++ blueSwitch: Switch 'blue switch'
+    isFixed = true
+    collectiveGroups = [switchBank]
+;
+
++ greenSwitch: Switch 'green switch'
+    isFixed = true
+    collectiveGroups = [switchBank]
+;
+</pre></div></p>
+
+<p>With this in place the command X SWITCHES will give the description of the bank of switches, rather than of each individual switch, and TAKE SWITCHES will yield the message "The switches are fixed in place" rather than three messages to that effect, one for each switch. On the other hand the command FLIP SWITCHES will act on each of the individual switches in turn, since it's not one of the <strong>collectiveActions</strong> defined for the <span class="code">switchBank</span> <span class="code">CollectiveGroup</span>.</p>
+
+<p>Note the use of the <span class="code">collectiveActions</span> property to define which actions will be handled by the CollectiveGroup rather than by each of its members. By default, <span class="code">collectiveActions</span> is simply <span class="code">[Examine]</span>, but, as here, we can override it to contain other actions instead or as well.</p>
+
+<p>For this to work properly, the name section of the CollectiveGroup object should simply be the plural of the name common to each of its members (here 'switches' corresponding to 'switch').</p>
+
+<p>If the <span class="code">desc</span> property of a CollectiveGroup is not explicitly defined, it defaults to a list of those of its members that are in scope.</p>
+
+<p>For some situations the <span class="code">Collective</span> class (or its <span class="code">DispensingCollective</span> subclass) defined in the <a href="../../extensions/docs/collective.htm">Collective</a> extension, may be a better bet than CollectiveGroup. The kind of situation where you'd want to use a Collective of DispensingCollective is where you have a group item (e.g. a bunch of grapes or stack of cans) from which you want to draw one or more individual items (e.g. grapes or cans).</p>
+
+<a name="mobile">
+<p>If you need a CollectiveGroup to represent items that are not fixed in place, but might be moved around (a collection of short portable cables, for example), you can instead use the <span class="code">MobileCollectiveGroup</span> class defined in the <a href="../../extensions/docs/mobilecollectivegroup.htm">MobileCollectiveGroup</a> extension.</p>
+
+<br>
+<p>A <strong><a name="secretdoor">SecretDoor</a></strong> is a Door that only acts like a Door when it's open. When it's closed it's either totally invisible, or it appears to be something else, such as a bookcase or a panel.</p>
+
+<p>To use a SecretDoor, define it just like a <a href="door.htm">Door</a>, but (assuming it starts out closed) define its <span class="code">vocab</span> property to be whatever's suitable for its closed state, and a separate <strong>vocabWhenOpen</strong> property to define the name and other vocab to use when it's open. For example:</p>
+
+ <p><div class="code"><pre>
+cellar: Room 'Cellar' 'cellar'
+    "It's not a pleasant place at the best of times, dark, dank and smelly, with
+    piles of old junk strewn all over the place waiting for you to find time to
+    sort them out (which you probably never will). A wine rack stands &lt;&lt;unless
+      wineRack.isOpen&gt;&gt; empty against the east wall&lt;&lt;else&gt;&gt;open to the east,
+    revealing a passage beyond&lt;&lt;end&gt;&gt;. "
+    
+    isLit = nil
+    darkName = 'Cellar (in the dark)'
+    darkDesc = "It's too dark to see anything down here, but you could just
+        about find your way back up to the kitchen. "
+    up = kitchen
+    west = wineRack
+    
+    regions = downstairs
+;
+
++ wineRack: SecretDoor 'wine rack; empty'
+    "It's empty; you never got round to restocking it. &lt;&lt;if isOpen&gt;&gt;It's also
+    open, revealing a dark passage behind.&lt;&lt;end&gt;&gt; "
+    
+    afterAction()
+    {
+       if(gActionIs(Jump) && !isOpen)
+        {
+            "The vibration causes the wine rack to swing open, revealing a dark
+            passage beyond. ";
+            makeOpen(true);
+        }
+    
+    }
+    otherSide = dpDoor
+    
+    vocabWhenOpen = 'dark passage; empty wine; rack'
+;
+</pre></div>
+
+<p>Note that the OPEN command won't work on a <span class="code">SecretDoor</span> when it's closed, but the CLOSE command will work on a <span class="code">SecretDoor</span> when it's open (unless you override the isOpenable property to make it do otherwise). The default assumption is that a <span class="code">SecretDoor</span> has to be opened by some non-standard and probably non-obvious means.</p>
+
+<p>If (exceptionally) a SecretDoor starts out open you can define its <strong>vocabWhenClosed</strong> property to specify the name and vocab to use for it when it's closed.</p>
+
+<p>If you want a SecretDoor to be effectively invisible when it's closed, you could give it a vocab property comprising an empty string and make sure nothing else mentions it when it's closed, but it's probably easier just to make it a Door and define <span class="code">isHidden = !isOpen</span>, for example:</p>
+
+ <p><div class="code"><pre>
+loft: Room 'Hay Loft' 'hay loft'
+    "There's not much up here, apart from a few stray strands of straw
+    scattered across the bare boards. A ladder leads back down to the
+    main part of the barn below. "
+    down = ladderDown
+    west = loftDoor
+    
+;
+
++ Decoration 'straw; stray of; strands'
+;
+    
++ Decoration 'bare boards;;them'
+;
+
++ ladderDown: StairwayDown 'ladder'
+    destination = barn
+    
+    dobjFor(Pull)
+    {
+        action()
+        {
+            if(loftDoor.isOpen)
+            {
+                "Pulling the ladder causes the secret door to close again. ";
+                loftDoor.makeOpen(nil);
+            }
+            else
+            {
+                "Pulling the ladder causes a secret door to open to the west,
+                revealing a small compartment beyond. ";
+                loftDoor.makeOpen(true);                
+            }
+        }
+    }
+;
+
++ loftDoor: Door 'small compartment;secret;door''
+    "It looks only just big enough to enter. "
+    otherSide = compartmentDoor   
+    
+    specialDesc = "A small compartment has opened up to the west. "
+    useSpecialDesc = isOpen
+    isHidden = !isOpen
+;
+
+
+smallCompartment: Room 'Small Compartment' 'small compartment'
+   "There's only just enough room to stand in here. "
+    otherSide = loftDoor
+    
+    east = compartmentDoor
+    out asExit(east)
+;
+
++ compartmentDoor: Door 'small door'
+    otherSide = loftDoor
+;
+</pre></div>
+
+<p>Note that in both these example, the <span class="code">west</span> exit will only be displayed in the exit lister when the corresponding SecretDoor is open. When a SecretDoor is closed then, for travel purposes, it behaves as if there's no exit through it, even though it's attached to an exit property like a standard Door.</p>
+
+<p>A <a name="containerdoor"></a><strong>ContainerDoor</strong>, on the other hand, isn't really a door at all, but it can be used to represent the door of an openable container, such that opening, closing, locking and unlocking the ContainerDoor has the same effect as opening, closing, locking and unlocking the container. To use a ContainerDoor we must locate it in multipy-containing Thing that has an OpenableContainer defined on its <span class="code">remapIn</span> property; we can't define a ContainerDoor directly as part of an openable container since the door would then be hidden inside the container when it was closed.</p>
+
+<p>So, for example, to define a cooker/oven we can put things in or on and which has a door we should do this:</p>
+
+ <p><div class="code"><pre>
+cooker: Fixture 'cooker;; oven stove'
+   remapIn: SubComponent { isOpenable = true }
+   remapOn: SubComponent { }
+;
+
++ cookerDoor: ContainerDoor 'cooker door; oven stove'
+;
+</pre></div>
+
+</div>
+<hr class="navb"><div class="navb">
+<i>adv3Lite Library Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="optional.htm">Optional Modules</a> &gt; 
+Extras
+<br><span class="navnp"><a class="nav" href="exit.htm"><i>Prev:</i> Exits</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="gadget.htm"><i>Next:</i>Gadgets </a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>

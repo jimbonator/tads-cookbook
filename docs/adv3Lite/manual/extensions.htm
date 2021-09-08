@@ -1,0 +1,125 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Extensions</title>
+
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="final.htm">Final Moves</a> &gt; 
+Extensions
+<br><span class="navnp"><a class="nav" href="webui.htm"><i>Prev:</i> The Web UI</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="../learning/exercises.htm"><i>Next:</i> Exercises & Samples</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+
+<h1>Extensions</h1>
+<p>Extensions are a way of providing additional functionality without cluttering up the main library. Adv3Lite provides a number of extensions that in one way or another offer functionality available in adv3 but excluded from the main adv3Lite library, or which extend the capabilities of adv3Lite beyond those of adv3. So, why make them extensions rather than optional modules in the adv3Lite library? There are three main reasons:</p>
+
+<ol>
+<li>If they were part of the main library, even as optional modules, they would look like more features that users of adv3Lite would need to learn, thus adding to the perceived complexity of the library. In fact no one needs to learn about any of these extensions unless and until they find themselves writing a game that actually requires them.</li>
+<li>Although optional modules <em>can</em> be excluded from a game, the temptation will often be to leave them there, either because we don't get round to excluding them, or we leave them in 'just in case' or to make use of them just because they're there. This can lead to unnecessary busy-work for both game authors and players; for example, the room parts extensions is fairly simple, but if it's left in by default, authors need to think about removing room parts that shouldn't be there, such as the east and west walls of a section of an east&ndash;west passage, and players may waste a lot of time trying to interact with walls and ceilings that don't actually do anything.</li>
+<li>For most games, the absence of features offered by these extensions won't be missed by either players or game authors, so for most games they are best left out. Using an 'opt-in' method of extensions should help to ensure that they're only included in games that will actually benefit from them.</li>
+</ol>
+
+<p>If you find you do want to include one or more of these extensions in your game, the process is fairly straightforward. In Workbench you would select the Project -> Add File to Project option from the main menu (or right-click on the Source Files icon in the left-hand pane files list and select Add File from the context menu), and then navigate to the extensions directory under the adv3Lite directory to select the extension you want. You should then move it down the file list so that it comes after all the adv3Lite library files but before your own game code. If you're compiling from the command line you need to add the extension file names to your project (t3m) file in the equivalent place: between the library files and your own game code files, in the following manner:</p>
+
+ <p><div class="code"><pre>
+-lib system
+-lib adv3Lite
+-source extensions/roomparts
+-source start
+
+ </pre></div>
+
+<p>Many of the extensions that come with adv3Lite make use of additional macros, templates and enums. These are all defined in the advlite.h file so you don't need to worry about adding any extra header files to your code to make use of any of these extensions.</p> 
+ 
+<p>The extensions currently distributed with adv3Lite are briefly described below, with links to more detailed documentation:</p>
+
+<a name="collective"></a>
+<h2>Collective</h2>
+<p>This extension defines the <span class="code">Collective</span> and <span class="code">DispensingCollective</span> classes, which can help with situations where you have one object representing a collective (e.g. a bunch of grapes) and one or more objects representing items drawn from that collective (e.g. individual grapes). The Collective class helps overcome disambiguation issues when both the collective and individual items are in scope (e.g. when 'grapes' might refer either to the bunch of grapes or to one or more individual grapes) and the DispensingCollective class further assists with making the collective issue individual items on demand (e.g. TAKE GRAPE or TAKE GRAPE FROM BUNCH) can be made to move an individual grape into the player character's inventory even when no individual grape is yet in scope). For details, see the documentation on the <a href="../../extensions/docs/collective.htm">Collective</a> extension.</p>
+
+<a name="cmdhelp"></a>
+<h2>Command Help</h2>
+<p>The cmdhelp extension offers the player a list of commands to try out if he or she enters an empty command (i.e. just presses ENTER at the command prompt). This may be particularly helpful for newcomers to IF. For details, see the documentation on the <a href="../../extensions/docs/cmdhelp.htm">Command Help</a> extension.</p>
+
+<a name="dynregion"></a>
+<h2>Dynamic Region</h2>
+<p>The DynamicRegion class defined in this extension allows the definition of Regions that can grow or shrink during the course of play (a regular Region being fixed and unalterable); this comes with certain restrictions, however. For details see <a href="../../extensions/docs/dynregion.htm">dynamicRegion.t</a></p>
+
+<h2>Footnotes</h2>
+<p>The Footnotes module is basically the same as its adv3 equivalent. Its function is to allow the display of footnotes in your game; these can provide additional information which players can view if they wish using the FOOTNOTES command, but which are not essential to playing the game. For details see <a href="../../extensions/docs/footnotes.htm">footnote.t</a> </p>
+
+<h2>Fueled Light Source</h2>
+<p>The FueledLightSource mix-in class defined in this extension facilitates defining light sources that have a finite life, since they consume some kind of fuel every turn that they're lit. Most games are unlikely to make use of fueled light sources, but for those that do, it may be convenient not to have to reinvent this particular wheel. For more information see the documentation on <a href="../../extensions/docs/fueled.htm">fueled.t</a>.</p>
+
+<a name="mobile">
+<h2>MobileCollectiveGroup</h2>
+<p>The MobileCollectiveGroup class is a subclass of <a href="extra.htm#collective">CollectiveGroup</a> that can be used for objects that may move around in the course of the game (whereas CollectiveGroup should be used for fixtures). Its function is to provide a summary description of a number of similar objects in currently in scope (such as differently coloured cables that are otherwise identical, for example. For more For more information see the documentation on <a href="../../extensions/docs/mobilecollectivegroup.htm">mobilecollectivegroup.t</a>.</p>
+
+<a name="objtime"></a>
+<h2>Objective Time</h2>
+<p>The objtime (objective <a name="obtime_idx">time</a>) extension provides a means of keeping track of game time (a notional clock/calendar within the game) by advancing the game clock by a defined amount each turn (by default this is one minute, but this can be customised by game authors in as fine-grained a manner as they wish, so that, in principle, every action could consume a different ammount of time). For more information see the documentation on <a href="../../extensions/docs/objtime.htm">objtime.t</a></p>
+
+<h2>Postures</h2>
+<p>The postures extension allows you to keep track of actor posture (standing, sitting or lying) and adds <strong>Bed</strong> and <strong>Chair</strong> classes that relate to these postures in particular ways. For more information see the documentation on <a href="../../extensions/docs/postures.htm">postures.t</a></p>
+
+<a name="relations"></a>
+<h2>Relations</h2>
+<p>The relations extension allows you to define various kinds of relations between objects (or between other items), rather in the style of Inform 7 relations. For more information see the documentation on <a href="../../extensions/docs/relations.htm">relations.t</a></p>
+
+<h2>Room Parts</h2>
+<p>The roomparts extension adds <a name="wall_idx">walls</a> and a <a name="ceiling_idx">ceiling</a> to every room, as well as a new <strong>OutdoorRoom</strong> class for rooms that have no walls and a sky instead of a ceiling. It also allows certain items in a room to be associated with particular room parts so that, for example, examining a wall might mention a picture that's notionally hanging there. For more details see the documentation on <a href="../../extensions/docs/roomparts.htm">roomparts.t.</a></p>
+
+<a name="rules"></a>
+<h2>Rules</h2>
+<p>The rules extensions allows you to define Rules and RuleBooks (which work similarly to their Inform 7 equivalents). For more details see the documentation on <a href="../../extensions/docs/rules.htm">rules.t.</a></p>
+
+<h2>SceneTopic</h2>
+<p>The SceneTopic extension implements the SceneTopic class (and its two subclasses) that can be used to define ActorTopicEntries that are triggered when a <a href="scene.htm">Scene</a> starts or ends. For more details see the documentation on <a href="../../extensions/docs/scenetopic.htm">scenetopic.t.</a></p>
+
+<a name="sensory"></a>
+<h2>Sensory</h2>
+<p>The Sensory extension provides fuller handling of Noises and Odors, and adds SensoryEvents, which are sudden sounds, smells or visible happenings to which nearby actors or objects can react. For more details see the documentation on <a href="../../extensions/docs/sensory.htm">sensory.t.</a></p>
+
+<h2>Signals</h2>
+<p>The Signals extension (which requires the Relations extension) provides a means for otherwise unrelated objects to communicate, that is for one object (the sender) to send specific signals to other objects which can then handle them in whatever way they wish. For more details see the documentation on <a href="../../extensions/docs/signals.htm">signals.t.</a></p>
+
+<a name="subtime"></a>
+<h2>Subtime</h2>
+<p>The subtime extension models the passage of subjective <a name="subtime_idx">time</a>. It is basically the adv3 subtime extension modified to work with adv3Lite. It allows game authors to define certain events within their story as occurring at particular times, and then provides a means of reporting the time as it appears to the player character when the player queries the time in between those events. For details see <a href="../../extensions/docs/subtime.htm">subtime.t</a></p>
+
+<a name="symconn"></a>
+<h2>Symconn</h2>
+<p>The symconn (Symmetrical Connectors) extension can be used to simplify the creation of symmetrical connections between rooms (for example where <span class="code">room1.east</span> leads to <span class="code">room2</span> and <span class="code">room2.west</span> leads to <span class="code">room1</span>). It can automate the reciprocal connections between rooms (so that, for example, if <span class="code">hall.east</span> is set to <span class="code">lounge</span>, <span class="code">lounge.west</span> will automatically be set to <span class="code">hall</span>). It also defines a number of two-way connector classes so that, for example, a simple door between two rooms can be specified with one object instead of the normal two. For details see <a href="../../extensions/docs/symconn.htm">symconn.t</a></p>
+
+<a name="sysrules"></a>
+<h2>Sysrules</h2>
+<p>The sysrules extension requires the rules extension to be present also. It defines a number of rules and rulebooks that replace various methods in some library classes, allowing greater tailoring of certain aspects of the turn cycle and of action handling using rules. For details see <a href="../../extensions/docs/sysrules.htm">sysrules.t</a></p>
+
+
+<h2>TIAAction</h2>
+<p>The TIAAction extension allows you to define actions involving three objects, such as PUT COIN IN SLOT WITH TWEEZERS. For more details see the documentation on <a href="../../extensions/docs/tiaaction.htm">tiaaction.t.</a> Note that it's possible to define actions involving two objects and a literal or a topic without this extension by using techniques outlined in the chapter on <a href="define.htm#threeobjects">Defining New Actions</a>.</p>
+
+<h2>Viewport</h2>
+<p>The Viewport extension allows you to define objects such as windows or CCTV screens that can be used to view remote locations and their contents when they're looked through or examined, without having a listing of the remote locations in question appearing in the room listing of the current room. This can be useful for implementing objects such as windows and CCTV screens where the player only becomes aware of what they show when s/he uses them. For more details see the documentation on <a href="../../extensions/docs/viewport.htm">viewport.t</a>. </p>
+
+<h2>Weight</h2>
+<p>The Weight extension allows you to track the weight of objects in your game and control for the weight capacity of actors and other objects in much the same way as the standard library handles bulk. For more details see the documentation on <a href="../../extensions/docs/weight.htm">weight.t</a>. </p>
+
+</div>
+<hr class="navb"><div class="navb">
+<i>Adv3Lite Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="final.htm">Final Moves</a> &gt; 
+Extensions
+<br><span class="navnp"><a class="nav" href="webui.htm"><i>Prev:</i> The Web UI</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="../learning/exercises.htm"><i>Next:</i> Exercises & Samples</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>

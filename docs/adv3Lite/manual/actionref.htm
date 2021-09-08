@@ -1,0 +1,876 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Actions &mdash; Action Reference</title>
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="action.htm">Actions</a> &gt;
+Action Reference
+<br><span class="navnp"><a class="nav" href="debug.htm"><i>Prev:</i> Debugging Commands</a> &nbsp;&nbsp;&nbsp; <i>Next:</i> <a class="nav" href="actor.htm">Actors</a> &nbsp;&nbsp;&nbsp;</span>
+
+</div>
+<div class="main">
+<h1>Action Reference</h1>
+<h2>How To Use This Reference</h2>
+
+<p>This reference section is designed to fulfil two purposes: (1) to make it easy for you to find the name of the Action you want if you only know the grammar (the form of the command) that leads to it (e.g. KILL FRED); and (2) to provide basic information to help with the customizing of action responses (for fuller information you may need to consult the library source code).</p>
+
+<p>If you know the name of the action you're looking for, you can go straight to the <a href="#actionlist">Action List</a> below to find it (and follow the directions there). If you don't, you can use the <a href="#grammar">Grammar List</a> immediately below to find it. For example, to find what action would be triggered by KILL FRED, click on K in the list of letters at the start of the Grammar List, and find the line that reads '<strong>kill</strong> something'. At the end of the line you'll see the hyperlinked action name <span class="code">Attack</span>. Clicking on the link will take you to further information about the Attack action in the Action List.</p>
+
+
+<h2><a name="grammar">Grammar List</a></h2>
+
+
+<p> <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> <a href="#F">F</a> <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> <a href="#N">N</a> <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> <a href="#U">U</a> <a href="#V">V</a> <a href="#W">W</a> <a href="#X">X</a> <a href="#Y">Y</a> <a href="#Z">Z</a></p>
+
+<h3><a name="A">A</a></h3>
+<strong>a</strong> topic <a href="#AskAboutImplicit">AskAboutImplicit</a><br>
+<strong>a</strong> someone <strong>about</strong> topic <a href="#AskAbout">AskAbout</a><br>
+<strong>a</strong> someone <strong>for</strong> topic <a href="#AskFor">AskFor</a><br>
+<strong>a</strong> someone <strong>how/if/when/where/whether/who</strong> topic <a href="#QueryAbout">QueryAbout</a><br>
+<strong>a for</strong> topic <a href="#AskForImplicit">AskForImplicit</a><br>
+<strong>a for</strong> topic <strong>from</strong> someone <a href="#AskFor">AskFor</a><br>
+<strong>a how/if/what/when/where/whether/who</strong> <a href="#QueryVague">QueryVague</a><br>
+<strong>a how/if/when/where/whether/who</strong> topic <a href="#Query">Query</a><br>
+<strong><span class="system">about</span></strong> <a href="#About">About</a><br>
+<strong>activate</strong> something <a href="#SwitchOn">SwitchOn</a><br>
+<strong>aft</strong> <a href="#Travel">Travel</a><br>
+<strong>again</strong> <a href="#Again">Again</a><br>
+<strong>affirmative</strong> <a href="#SayYes">SayYes</a><br>
+<strong>are</strong> topic <a href="#Query">Query</a><br>
+<strong>ask</strong> topic <a href="#AskAboutImplicit">AskAboutImplicit</a><br>
+<strong>ask</strong> someone <strong>about</strong> topic <a href="#AskAbout">AskAbout</a><br>
+<strong>ask</strong> someone <strong>for</strong> topic <a href="#AskFor">AskFor</a><br>
+<strong>ask</strong> someone <strong>how/if/when/where/whether/who</strong> topic <a href="#QueryAbout">QueryAbout</a><br>
+<strong>ask about</strong> topic <a href="#AskAboutImplicit">AskAboutImplicit</a><br>
+<strong>ask for</strong> topic  <a href="#AskForImplicit">AskForImplicit</a><br>
+<strong>ask for</strong> topic <strong>from</strong> someone <a href="#AskFor">AskFor</a><br>
+<strong>ask how/if/what/when/where/whether/who</strong> <a href="#QueryVague">QueryVague</a><br>
+<strong>ask how/if/what/when/where/whether/who</strong> topic <a href="#Query">Query</a><br>
+<strong>attach</strong> something <a href="#Attach">Attach</a><br>
+<strong>attach</strong> something <strong>to</strong> something <a href="#AttachTo">AttachTo</a><br>
+<strong>attack</strong> something <a href="#Attack">Attack</a><br>
+<strong>attack</strong> something <strong>with</strong> something <a href="#AttackWith">AttackWith</a><br>
+
+<h3><a name="B">B</a></h3>
+<strong>back</strong>  <a href="#GoBack">GoBack</a><br>
+<strong>blow</strong> something <strong>out</strong> <a href="#Extinguish">Extinguish</a><br>
+<strong>blow out</strong> something <a href="#Extinguish">Extinguish</a><br>
+<strong>board</strong> something <a href="#Board">Board</a><br>
+<strong>break</strong> something <a href="#Break">Break</a><br>
+<strong><span class="system">brief</span></strong> <a href="#Brief">Brief</a><br>
+<strong>bye</strong> <a href="#Goodbye">Goodbye</a><br>
+<strong>buckle [up]</strong> something <a href="#Fasten">Fasten</a><br>
+<strong>buckle</strong> something <strong>to</strong> something <a href="#FastenTo">FastenTo</a><br>
+<strong>burn</strong> something <a href="#Burn">Burn</a><br>
+<strong>burn</strong> something <strong>with</strong> something <a href="#BurnWith">BurnWith</a><br>
+
+<h3><a name="C">C</a></h3>
+<strong>c</strong> <a href="#GoTo">Continue</a><br>
+<strong>can</strong> topic <a href="#Query">Query</a><br>
+<strong>clean</strong> something <a href="#Clean">Clean</a><br>
+<strong>clean</strong> something <strong>with</strong> something <a href="#CleanWith">CleanWith</a><br>
+<strong>climb</strong> something <a href="#Climb">Climb</a><br>
+<strong>climb down</strong> <a href="#ClimbDownVague">ClimbDownVague</a><br>
+<strong>climb down</strong> something <a href="#ClimbDown">ClimbDown</a><br>
+<strong>climb in/inside/in to/into</strong> something <a href="#Enter">Enter</a><br>
+<strong>climb on/on to/onto</strong> something <a href="#Board">Board</a><br>
+<strong>climb out</strong> <a href="#GetOff">GetOut</a><br>
+<strong>climb out of</strong> something <a href="#GetOutOf">GetOutOf</a><br>
+<strong>climb up</strong> <a href="#ClimbUpVague">ClimbUpVague</a><br>
+<strong>climb up</strong> something <a href="#ClimbUp">ClimbUp</a><br>
+<strong>close</strong> something <a href="#Close">Close</a><br>
+<strong>cogitate</strong> <a href="#Think">Think</a><br>
+<strong>cogitate about</strong> topic <a href="#ThinkAbout">ThinkAbout</a><br>
+<strong>consult</strong> something <strong>about/on</strong> topic <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>connect</strong> something <a href="#Attach">Attach</a><br>
+<strong>connect</strong> something <strong>to</strong> something <a href="#AttachTo">AttachTo</a><br>
+<strong>consume</strong> something <a href="#Eat">Eat</a><br>
+<strong>continue</strong> <a href="#GoTo">Continue</a><br>
+<strong>could</strong> topic <a href="#Query">Query</a><br>
+<strong><span class="system">credits</span></strong> <a href="#Credits">Credits</a><br>
+
+<h3><a name="D">D</a></h3>
+<strong>d</strong> <a href="#Travel">Travel</a><br>
+<strong><span class="debug">debug</span></strong> <a href="#DebugI">DebugI</a><br>
+<strong><span class="debug">debug actions/doers/messages/spelling/status/stop/off</span></strong> <a href="#Debug">Debug</a><br>
+<strong>deactivate</strong> something <a href="#SwitchOff">SwitchOff</a><br>
+<strong>destroy</strong> something <a href="#Break">Break</a><br>
+<strong>detach</strong> something <a href="#Detach">Detach</a><br>
+<strong>detach</strong> something <strong>from</strong> something <a href="#DetachFrom">DetachFrom</a><br>
+<strong>dig</strong> something <a href="#Dig">Dig</a><br>
+<strong>dig</strong> something <strong>with</strong> something <a href="#DigWith">DigWith</a><br>
+<strong>disconnect</strong> something <a href="#Detach">Detach</a><br>
+<strong>disconnect</strong> something <strong>from</strong> something <a href="#DetachFrom">DetachFrom</a><br>
+<strong>disembark</strong> <a href="#GetOff">GetOut</a><br>
+<strong>do/does</strong> topic <a href="#Query">Query</a><br>
+<strong>doff</strong> something <a href="#Doff">Doff</a><br>
+<strong>don</strong> something <a href="#Wear">Wear</a><br>
+<strong>douse</strong> something <a href="#Extinguish">Extinguish</a><br>
+<strong>down</strong> <a href="#Travel">Travel</a><br>
+<strong>drag</strong> something direction <a href="#PushTravelDir">PushTravelDir</a><br>
+<strong>drag</strong> something <strong>down</strong> something <a href="#PushTravelClimbDown">PushTravelClimbDown</a><br>
+<strong>drag</strong> something <strong>in/in to/into</strong> something <a href="#PushTravelEnter">PushTravelEnter</a><br>
+<strong>drag</strong> something <strong>out/out</strong> of something <a href="#PushTravelGetOutOf">PushTravelGetOutOf</a><br>
+<strong>drag</strong> something <strong>through/thru something</strong> <a href="#PushTravelThrough">PushTravelThrough</a><br>
+<strong>drag</strong> something <strong>up</strong> something <a href="#PushTravelClimbUp">PushTravelClimbUp</a><br>
+<strong>drink</strong> something <a href="#Drink">Drink</a><br>
+<strong>drop</strong> something <a href="#Drop">Drop</a><br>
+<strong>drop</strong> something <strong>on/onto/on to/upon</strong> something <a href="#PutOn">PutOn</a><br>
+
+<h3><a name="E">E</a></h3>
+<strong>e</strong> <a href="#Travel">Travel</a><br>
+<strong>east</strong> <a href="#Travel">Travel</a><br>
+<strong>eat</strong> something <a href="#Eat">Eat</a><br>
+<strong>enter</strong> <a href="#GoIn">GoIn</a><br>
+<strong>enter</strong> something <a href="#Enter">Enter</a><br>
+<strong>enter</strong> literal <strong>in/in to/into/on/with</strong> something <a href="#EnterOn">EnterOn</a><br>
+<strong><span class="debug">eval</span></strong> literal <a href="#Evaluate">Evaluate</a><br>
+<strong>examine</strong> something <a href="#Examine">Examine</a><br>
+<strong>extinguish</strong> something <a href="#Extinguish">Extinguish</a><br>
+<strong>exit</strong> <a href="#GoOut">GoOut</a><br>
+<strong>exit</strong> something <a href="#GetOutOf">GetOutOf</a><br>
+<strong><span class="system">exit colo[u]r off/on/blue/green/red/yellow</span></strong> <a href="#ExitsColour">ExitsColour</a><br>
+<strong><span class="system">exits</span></strong> <a href="#Exits">Exits</a><br>
+<strong><span class="system">exits all</span></strong> <a href="#ExitsMode">ExitsMode</a><br>
+<strong><span class="system">exits colo[u]r off/on/blue/green/red/yellow</span></strong> <a href="#ExitsColour">ExitsColour</a><br>
+<strong><span class="system">exits look</span></strong> <a href="#ExitsMode">ExitsMode</a><br>
+<strong><span class="system">exits none</span></strong> <a href="#ExitsMode">ExitsMode</a><br>
+<strong><span class="system">exits off/on</span></strong> <a href="#ExitsMode">ExitsMode</a><br>
+<strong><span class="system">exits status/status line/statusline</span></strong> <a href="#ExitsMode">ExitsMode</a><br>
+
+
+<h3><a name="F">F</a></h3>
+<strong>f</strong> <a href="#Travel">Travel</a><br>
+<strong>fasten</strong> something <a href="#Fasten">Fasten</a><br>
+<strong>fasten</strong> something <strong>to</strong> something <a href="#FastenTo">FastenTo</a><br>
+<strong>feel</strong> something <a href="#Feel">Feel</a><br>
+<strong><span class="debug">fiat lux</span></strong> <a href="#FiatLux">FiatLux</a><br>
+<strong>find</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>find</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>flip</strong> something <a href="#Flip">Flip</a><br>
+<strong>follow</strong> something <a href="#Follow">Follow</a><br>
+<strong>fore</strong> <a href="#Travel">Travel</a><br>
+<strong><span class="system">full/full score/fullscore</span></strong> <a href="#FullScore">FullScore</a><br>
+
+<h3><a name="G">G</a></h3>
+<strong>g</strong> <a href="#Again">Again</a><br>
+<strong>get</strong> something <a href="#Take">Take</a><br>
+<strong>get</strong> something <strong>from/out of/off/off of</strong> something <a href="#TakeFrom">TakeFrom</a><br>
+<strong>get down</strong> <a href="#GetOff">GetOut</a><br>
+<strong>get down from</strong> something <a href="#GetOff">GetOff</a><br>
+<strong>get in/inside/in to/into</strong> something <a href="#Enter">Enter</a><br>
+<strong>get off</strong> <a href="#GetOff">GetOut</a><br>
+<strong>get off/off of</strong> something <a href="#GetOff">GetOff</a><br>
+<strong>get on/on to/onto</strong> something <a href="#Board">Board</a><br>
+<strong>get out</strong> <a href="#GetOff">GetOut</a><br>
+<strong>get out of</strong> something <a href="#GetOutOf">GetOutOf</a><br>
+<strong>get up</strong> <a href="#Stand">Stand</a><br>
+<strong>give</strong> something <a href="#GiveToImplicit">GiveToImplicit</a><br>
+<strong>give</strong> someone something <a href="#GiveTo">GiveTo</a><br>
+<strong>give</strong> something <strong>to</strong> someone <a href="#GiveTo">GiveTo</a><br>
+<strong><span class="debug">gn</span></strong> something <a href="#GoNear">GoNear</a><br>
+<strong>goodbye/good-bye/good bye</strong> <a href="#Goodbye">Goodbye</a><br>
+<strong>go</strong>  <a href="#VagueTravel">VagueTravel</a><br>
+<strong>go</strong> direction <a href="#Travel">Travel</a><br>
+<strong>go back</strong>  <a href="#GoBack">GoBack</a><br>
+<strong>go down</strong> <a href="#ClimbDownVague">ClimbDownVague</a><br>
+<strong>go down</strong> something <a href="#ClimbDown">ClimbDown</a><br>
+<strong>go in/inside/in to/into</strong> something <a href="#Enter">Enter</a><br>
+<strong><span class="debug">go near</span></strong> something <a href="#GoNear">GoNear</a><br>
+<strong>go through/thru</strong> something <a href="#GoThrough">GoThrough</a><br>
+<strong>go to|to the</strong> direction <a href="#Travel">Travel</a><br>
+<strong>go to</strong> somewhere <a href="#GoTo">GoTo</a><br>
+<strong>go up</strong> <a href="#ClimbUpVague">ClimbUpVague</a><br>
+<strong>go up</strong> something <a href="#ClimbUp">ClimbUp</a><br>
+<strong><span class="debug">gonear</span></strong> something <a href="#GoNear">GoNear</a><br>
+<strong>greet</strong> someone <a href="#TalkTo">TalkTo</a><br>
+
+<h3><a name="H">H</a></h3>
+<strong>hallo</strong> <a href="#Hello">Hello</a><br>
+<strong>have/has</strong> topic <a href="#Query">Query</a><br>
+<strong>hello</strong> <a href="#Hello">Hello</a><br>
+<strong>hi</strong> <a href="#Hello">Hello</a><br>
+<strong>hit</strong> something <a href="#Attack">Attack</a><br>
+<strong>hit</strong> something <strong>with</strong> something <a href="#AttackWith">AttackWith</a><br>
+<strong><span class="system">hint</span></strong> <a href="#Hints">Hints</a><br>
+<strong><span class="system">hints</span></strong> <a href="#Hints">Hints</a><br>
+<strong><span class="system">hints off</span></strong> <a href="#HintsOff">HintsOff</a><br>
+<strong>holler</strong> <a href="#Yell">Yell</a><br>
+<strong>how</strong> topic <a href="#Query">Query</a><br>
+
+<h3><a name="I">I</a></h3>
+<strong>i</strong> <a href="#Inventory">Inventory</a><br>
+<strong>if</strong> topic <a href="#Query">Query</a><br>
+<strong>ignite</strong> something <a href="#Burn">Burn</a><br>
+<strong>ignite</strong> something <strong>with</strong> something <a href="#BurnWith">BurnWith</a><br>
+<strong>imbibe</strong> something <a href="#Drink">Drink</a><br>
+<strong>in</strong> <a href="#Travel">Travel</a><br>
+<strong>insert</strong> something <strong>in/into/in to/inside/inside of</strong> something <a href="#PutIn">PutIn</a><br>
+<strong>inspect</strong> something <a href="#Examine">Examine</a><br>
+<strong>inv</strong> <a href="#Inventory">Inventory</a><br>
+<strong>inventory</strong> <a href="#Inventory">Inventory</a><br>
+<strong>is</strong> topic <a href="#Query">Query</a><br>
+
+<h3><a name="I">J</a></h3>
+<strong>jump</strong> <a href="#Jump">Jump</a><br>
+<strong>jump</strong> something <a href="#JumpOver">JumpOver</a><br>
+<strong>jump off</strong> <a href="#JumpOffIntransitive">JumpOffIntransitive</a><br>
+<strong>jump off</strong> something <a href="#JumpOff">JumpOff</a><br>
+<strong>jump over</strong> something <a href="#JumpOver">JumpOver</a><br>
+
+<h3><a name="K">K</a></h3>
+<strong>kick</strong> something <a href="#Attack">Attack</a><br>
+<strong>kill</strong> something <a href="#Attack">Attack</a><br>
+<strong>kill</strong> something <strong>with</strong> something <a href="#AttackWith">AttackWith</a><br>
+<strong>kiss</strong> something <a href="#Kiss">Kiss</a><br>
+
+<h3><a name="L">L</a></h3>
+<strong>l</strong> <a href="#Look">Look</a><br>
+<strong>l</strong> something <a href="#Examine">Examine</a><br>
+<strong>l</strong> topic <strong>up</strong> <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>l</strong> topic <strong>up in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>l around</strong> <a href="#Look">Look</a><br>
+<strong>l at</strong> something <a href="#Examine">Examine</a><br>
+<strong>l behind</strong> something <a href="#LookBehind">LookBehind</a><br>
+<strong>l for</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>l for</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>l in/inside</strong> something <a href="#LookIn">LookIn</a><br>
+<strong>l tests</strong> (/fully) <a href="#ListTests">ListTests</a><br>
+<strong>l through/thru</strong> something <a href="#LookThrough">LookThrough</a><br>
+<strong>l under</strong> something <a href="#LookUnder">LookUnder</a><br>
+<strong>l up</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>l up</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>leave</strong> <a href="#GoOut">GoOut</a><br>
+<strong>leave</strong> something <a href="#GetOutOf">GetOutOf</a><br>
+<strong><span class="debug">let there be light</span></strong> <a href="#FiatLux">FiatLux</a><br>
+<strong>lie down</strong> <a href="#Lie">Lie</a><br>
+<strong>lie down in</strong> something <a href="#LieIn">LieIn</a><br>
+<strong>lie down on</strong> something <a href="#LieOn">LieOn</a><br>
+<strong>lie in</strong> something <a href="#LieIn">LieIn</a><br>
+<strong>lie on</strong> something <a href="#LieOn">LieOn</a><br>
+<strong>light</strong> something <a href="#Light">Light</a><br>
+<strong>light</strong> something <strong>with</strong> something <a href="#BurnWith">BurnWith</a><br>
+<strong>list tests</strong> (/fully) <a href="#ListTests">ListTests</a><br>
+<strong>listen</strong><a href="#Listen"> Listen</a><br>
+<strong>listen to</strong> something <a href="#ListenTo">ListenTo</a><br>
+<strong>lock</strong> something <a href="#Lock">Lock</a><br>
+<strong>lock</strong> something <strong>with</strong> something <a href="#LockWith">LockWith</a><br>
+<strong>look</strong> <a href="#Look">Look</a><br>
+<strong>look</strong> something <a href="#Examine">Examine</a><br>
+<strong>look</strong> topic <strong>up</strong> <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>look</strong> topic <strong>up in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>look around</strong> <a href="#Look">Look</a><br>
+<strong>look at</strong> something <a href="#Examine">Examine</a><br>
+<strong>look behind</strong> something <a href="#LookBehind">LookBehind</a><br>
+<strong>look for</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>look for</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>look in/inside</strong> something <a href="#LookIn">LookIn</a><br>
+<strong>look through/thru</strong> something <a href="#LookThrough">LookThrough</a><br>
+<strong>look under</strong> something <a href="#LookUnder">LookUnder</a><br>
+<strong>look up</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>look up</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+
+<h3><a name="M">M</a></h3>
+<strong>move</strong> something <a href="#Move">Move</a><br>
+<strong>move</strong> something direction <a href="#PushTravelDir">PushTravelDir</a><br>
+<strong>move</strong> something <strong>down</strong> something <a href="#PushTravelClimbDown">PushTravelClimbDown</a><br>
+<strong>move</strong> something <strong>in/in to/into</strong> something <a href="#PushTravelEnter">PushTravelEnter</a><br>
+<strong>move</strong> something <strong>out/out</strong> of something <a href="#PushTravelGetOutOf">PushTravelGetOutOf</a><br>
+<strong>move</strong> something <strong>to/under</strong> something <a href="#MoveTo">MoveTo</a><br>
+<strong>move</strong> something <strong>through/thru something</strong> <a href="#PushTravelThrough">PushTravelThrough</a><br>
+<strong>move</strong> something <strong>up</strong> something <a href="#PushTravelClimbUp">PushTravelClimbUp</a><br>
+<strong>move</strong> something <strong>with</strong> something <a href="#MoveWith">MoveWith</a><br>
+
+<h3><a name="N">N</a></h3>
+<strong>n</strong> <a href="#Travel">Travel</a><br>
+<strong>ne</strong> <a href="#Travel">Travel</a><br>
+<strong>negative</strong> <a href="#SayNo">SayNo</a><br>
+<strong>no</strong> <a href="#No">No</a><br>
+<strong>north</strong> <a href="#Travel">Travel</a><br>
+<strong>northeast</strong> <a href="#Travel">Travel</a><br>
+<strong><span class="system">notify</span></strong> <a href="#Notify">Notify</a><br>
+<strong><span class="system">notify off</span></strong> <a href="#NotifyOff">NotifyOff</a><br>
+<strong><span class="system">notify on</span></strong> <a href="#NotifyOn">NotifyOn</a><br>
+
+<h3><a name="O">O</a></h3>
+<strong>offer</strong> something <a href="#GiveToImplicit">GiveToImplicit</a><br>
+<strong>offer</strong> someone something <a href="#GiveTo">GiveTo</a><br>
+<strong>offer</strong> something <strong>to</strong> someone <a href="#GiveTo">GiveTo</a><br>
+<strong>open</strong> something <a href="#Open">Open</a><br>
+<strong>out</strong> <a href="#Travel">Travel</a><br>
+<strong>out of</strong> something <a href="#GetOutOf">GetOutOf</a><br>
+
+<h3><a name="P">P</a></h3>
+<strong>p</strong> <a href="#Travel">Travel</a><br>
+<strong>peer through/thru</strong> something <a href="#LookThough">LookThrough</a><br>
+<strong>pick</strong> something <strong>up</strong> <a href="#Take">Take</a><br>
+<strong>pick up</strong> something <a href="#Take">Take</a><br>
+<strong>place</strong> something <strong>behind</strong> something <a href="#PutBehind">PutBehind</a><br>
+<strong>place</strong> something <strong>in/into/in to/inside/inside of</strong> something <a href="#PutIn">PutIn</a><br>
+<strong>place</strong> something <strong>on/onto/on to/upon</strong> something <a href="#PutOn">PutOn</a><br>
+<strong>place</strong> something <strong>under</strong> something <a href="#PutUnder">PutUnder</a><br>
+<strong>plug</strong> something <strong>in</strong> <a href="#PlugIn">PlugIn</a><br>
+<strong>plug</strong> something <strong>in/in to/into</strong> something <a href="#PlugInto">PlugInto</a><br>
+<strong>plug in</strong> something <a href="#PlugIn">PlugIn</a><br>
+<strong><span class="debug">pn</span></strong> something <a href="#Purloin">Purloin</a><br>
+<strong>ponder</strong> <a href="#Think">Think</a><br>
+<strong>ponder about</strong> topic <a href="#ThinkAbout">ThinkAbout</a><br>
+<strong>port</strong> <a href="#Travel">Travel</a><br>
+<strong>pour</strong> something <a href="#Pour">Pour</a><br>
+<strong>pour</strong> something <strong>in/in to/into</strong> something <a href="#PourInto">PourInto</a><br>
+<strong>pour</strong> something <strong>on/on to/onto</strong> something <a href="#PourOnto">PourOnto</a><br>
+<strong>press</strong> something <a href="#Push">Push</a><br>
+<strong>pull</strong> something <a href="#Pull">Pull</a><br>
+<strong>pull</strong> something direction <a href="#PushTravelDir">PushTravelDir</a><br>
+<strong>pull</strong> something <strong>down</strong> something <a href="#PushTravelClimbDown">PushTravelClimbDown</a><br>
+<strong>pull</strong> something <strong>in/in to/into</strong> something <a href="#PushTravelEnter">PushTravelEnter</a><br>
+<strong>pull</strong> something <strong>out/out</strong> of something <a href="#PushTravelGetOutOf">PushTravelGetOutOf</a><br>
+<strong>pull</strong> something <strong>through/thru something</strong> <a href="#PushTravelThrough">PushTravelThrough</a><br>
+<strong>pull</strong> something <strong>up</strong> something <a href="#PushTravelClimbUp">PushTravelClimbUp</a><br>
+<strong>punch</strong> something <a href="#Attack">Attack</a><br>
+<strong><span class="debug">purloin</span></strong> something <a href="#Purloin">Purloin</a><br>
+<strong>push</strong> something <a href="#Push">Push</a><br>
+<strong>push</strong> something direction <a href="#PushTravelDir">PushTravelDir</a><br>
+<strong>push</strong> something <strong>down</strong> something <a href="#PushTravelClimbDown">PushTravelClimbDown</a><br>
+<strong>push</strong> something <strong>in/in to/into</strong> something <a href="#PushTravelEnter">PushTravelEnter</a><br>
+<strong>push</strong> something <strong>out/out</strong> of something <a href="#PushTravelGetOutOf">PushTravelGetOutOf</a><br>
+<strong>push</strong> something <strong>to/under</strong> something <a href="#MoveTo">MoveTo</a><br>
+<strong>push</strong> something <strong>through/thru something</strong> <a href="#PushTravelThrough">PushTravelThrough</a><br>
+<strong>push</strong> something <strong>up</strong> something <a href="#PushTravelClimbUp">PushTravelClimbUp</a><br>
+<strong>put</strong> something <strong>down</strong> <a href="#Drop">Drop</a><br>
+<strong>put</strong> something <strong>behind</strong> something <a href="#PutBehind">PutBehind</a><br>
+<strong>put</strong> something <strong>in/into/in to/inside/inside of</strong> something <a href="#PutIn">PutIn</a><br>
+<strong>put</strong> something <strong>on</strong> <a href="#Wear">Wear</a><br>
+<strong>put</strong> something <strong>on/onto/on to/upon</strong> something <a href="#PutOn">PutOn</a><br>
+<strong>put</strong> something <strong>out</strong> <a href="#Extinguish">Extinguish</a><br>
+<strong>put</strong> something <strong>under</strong> something <a href="#PutUnder">PutUnder</a><br>
+<strong>put down</strong> something <a href="#Drop">Drop</a><br>
+<strong>put on</strong> something <a href="#Wear">Wear</a><br>
+<strong>put out</strong> something <a href="#Extinguish">Extinguish</a><br>
+
+<h3><a name="Q">Q</a></h3>
+<strong><span class="system">q</span></strong> <a href="#Quit">Quit</a><br>
+<strong>quaff</strong> something <a href="#Drink">Drink</a><br>
+<strong><span class="system">quit</span></strong> <a href="#Quit">Quit</a><br>
+
+<h3><a name="R">R</a></h3>
+<strong>read</strong> something <a href="#Read">Read</a><br>
+<strong>read about</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>read about</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong><span class="system">record</span></strong> [filename] <a href="#RecordOn">RecordOn</a><br>
+<strong><span class="system">record events</span></strong> [filename] <a href="#RecordEvents">RecordEvents</a><br>
+<strong><span class="system">record events on</span></strong> <a href="#RecordOn">RecordEvents</a><br>
+<strong><span class="system">record off</span></strong> <a href="#RecordOff">RecordOff</a><br>
+<strong><span class="system">record on</span></strong>  <a href="#RecordOn">RecordOn</a><br>
+<strong>remove</strong> something <a href="#Remove">Remove</a><br>
+<strong>remove</strong> something <strong>from</strong> something <a href="#TakeFrom">TakeFrom</a><br>
+<strong><span class="system">replay</span></strong> [filename] <a href="#Replay">Replay</a><br>
+<strong><span class="system">replay nonstop/quiet</span></strong> [filename] <a href="#Replay">Replay</a><br>
+<strong><span class="system">restart</span></strong> <a href="#Restart">Restart</a><br>
+<strong><span class="system">restore</span></strong> [filename] <a href="#Restore">Restore</a><br> 
+<strong>return</strong>  <a href="#GoBack">GoBack</a><br>
+<strong>rotate</strong> something <a href="#Turn">Turn</a><br>
+<strong>rotate</strong> something <strong>to</strong> literal <a href="#TurnTo">TurnTo</a><br>
+<strong>rotate</strong> something <strong>with</strong> something <a href="#TurnWith">TurnWith</a><br>
+<strong><span class="system">rq</span></strong> [filename] <a href="#Replay">Replay</a><br>
+<strong>ruin</strong> something <a href="#Break">Break</a><br>
+<strong>run</strong>  <a href="#VagueTravel">VagueTravel</a><br>
+<strong>run</strong> direction <a href="#Travel">Travel</a><br>
+
+<h3><a name="S">S</a></h3>
+<strong>s</strong> <a href="#Travel">Travel</a><br>
+<strong><span class="system">save</span></strong> [filename] <a href="#Save">Save</a><br>
+<strong>say</strong> topic <a href="#Say">Say</a><br>
+<strong>say</strong> topic <strong>to</strong> someone <a href="#SayTo">SayTo</a><br>
+<strong>say bye/goodbye/good-bye/good bye</strong> <a href="#Goodbye">Goodbye</a><br>
+<strong>say hallo/hello/hi</strong> <a href="#Hello">Hello</a><br>
+<strong>say hello to</strong> someone <a href="#TalkTo">TalkTo</a><br>
+<strong>say no</strong> <a href="#SayNo">SayNo</a><br>
+<strong>say that</strong> topic <a href="#Say">Say</a><br>
+<strong>say that</strong> topic <strong>to</strong> someone <a href="#SayTo">SayTo</a><br>
+<strong>say yes</strong> <a href="#SayYes">SayYes</a><br>
+<strong>sb</strong> <a href="#Travel">Travel</a><br>
+<strong>screw</strong> something <a href="#Screw">Screw</a><br>
+<strong>screw</strong> something <strong>with</strong> something <a href="#ScrewWith">ScrewWith</a><br>
+<strong><span class="system">score</span></strong> <a href="#Score">Score</a><br>
+<strong>scream</strong> <a href="#Yell">Yell</a><br>
+<strong><span class="system">script</span></strong> [filename] <a href="#ScriptOn">ScriptOn</a><br>
+<strong><span class="system">script off</span></strong> <a href="#ScriptOff">ScriptOff</a><br>
+<strong><span class="system">script on</span></strong> <a href="#ScriptOn">ScriptOn</a><br>
+<strong>se</strong> <a href="#Travel">Travel</a><br>
+<strong>search</strong> something <a href="#Search">Search</a><br>
+<strong>search</strong> something <strong>for</strong> topic <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>search for</strong> topic <a href="#ConsultWhatAbout">ConsultWhatAbout</a><br>
+<strong>search for</strong> topic <strong>in/on</strong> something <a href="#ConsultAbout">ConsultAbout</a><br>
+<strong>set</strong> something <a href="#Set">Set</a><br>
+<strong>set</strong> something <strong>down</strong> <a href="#Drop">Drop</a><br>
+<strong>set</strong> something <strong>behind</strong> something <a href="#PutBehind">PutBehind</a><br>
+<strong>set</strong> something <strong>in/into/in to/inside/inside of</strong> something <a href="#PutIn">PutIn</a><br>
+<strong>set</strong> something <strong>on/onto/on to/upon</strong> something <a href="#PutOn">PutOn</a><br>
+<strong>set</strong> something <strong>to</strong> literal <a href="#SetTo">SetTo</a><br>
+<strong>set</strong> something <strong>under</strong> something <a href="#PutUnder">PutUnder</a><br>
+<strong>set down</strong> something <a href="#Drop">Drop</a><br>
+<strong>set fire to</strong> something <a href="#Burn">Burn</a><br>
+<strong>set fire to</strong> something <strong>with</strong> something <a href="#BurnWith">BurnWith</a><br>
+<strong>sit</strong> <a href="#Sit">Sit</a><br>
+<strong>sit down</strong> <a href="#Sit">Sit</a><br>
+<strong>sit down in</strong> something <a href="#SitIn">SitIn</a><br>
+<strong>sit down on</strong> something <a href="#SitOn">SitOn</a><br>
+<strong>sit in</strong> something <a href="#SitIn">SitIn</a><br>
+<strong>sit on</strong> something <a href="#SitOn">SitOn</a><br>
+<strong>sleep</strong> <a href="#Sleep">Sleep</a><br>
+<strong>smash</strong> something <a href="#Break">Break</a><br>
+<strong>should</strong> topic <a href="#Query">Query</a><br>
+<strong>shout</strong> <a href="#Yell">Yell</a><br>
+<strong>show</strong> something <a href="#ShowToImplicit">ShowToImplicit</a><br>
+<strong>show</strong> someone something <a href="#ShowTo">ShowTo</a><br>
+<strong>show</strong> something <strong>to</strong> someone <a href="#ShowTo">ShowTo</a><br>
+<strong>shut</strong> something <a href="#Close">Close</a><br>
+<strong>smell</strong> <a href="#Smell">Smell</a><br>
+<strong>smell</strong> something <a href="#SmellSomething"> SmellSomething</a><br>
+<strong>sniff</strong> <a href="#Sniff">Smell</a><br>
+<strong>sniff</strong> something <a href="#SmellSomething" >SmellSomething</a><br>
+<strong>south</strong> <a href="#Travel">Travel</a><br>
+<strong>southeast</strong> <a href="#Travel">Travel</a><br>
+<strong>southwest</strong> <a href="#Travel">Travel</a><br>
+<strong><span class="system">status</span></strong> <a href="#Score">Score</a><br>
+<strong>stand</strong> <a href="#Stand">Stand</a><br>
+<strong>stand in|in to|into</strong> something <a href="#StandIn">StandIn</a><br>
+<strong>stand on|on to|onto</strong> something <a href="#StandOn">StandOn</a><br>
+<strong>stand up</strong> <a href="#Stand">Stand</a><br>
+<strong>starboard</strong> <a href="#Travel">Travel</a><br>
+<strong>strike</strong> something <strong>with</strong> something <a href="#AttackWith">AttackWith</a><br>
+<strong>sw</strong> <a href="#Travel">Travel</a><br>
+<strong>switch</strong> something <a href="#SwitchVague">SwitchVague</a><br>
+<strong>switch</strong> something <strong>off</strong> <a href="#SwitchOff">SwitchOff</a><br>
+<strong>switch</strong> something <strong>on</strong> <a href="#SwitchOn">SwitchOn</a><br>
+<strong>switch off</strong> something <a href="#SwitchOff">SwitchOff</a><br>
+<strong>switch on</strong> something <a href="#SwitchOn">SwitchOn</a><br>
+
+
+
+<h3><a name="T">T</a></h3>
+<strong>t</strong> topic <a href="#TellAboutImplicit">TellAboutImplicit</a><br>
+<strong>t</strong> someone <strong>about</strong> topic <a href="#TellAbout">TellAbout</a><br>
+<strong>talk about</strong> topic <a href="#TalkAboutImplicit">TalkAboutImplicit</a><br>
+<strong>talk to</strong> someone <a href="#TalkTo">TalkTo</a><br>
+<strong>talk to</strong> someone <strong>about</strong> topic <a href="#TalkAbout">TalkAbout</a><br>
+<strong>take</strong> something <a href="#Take">Take</a><br>
+<strong>take</strong> something off <a href="#Doff">Doff</a><td>dobj</td><br>
+<strong>take</strong> something <strong>from/out of/off/off of</strong> something <a href="#TakeFrom">TakeFrom</a><br>
+<strong>take inventory</strong> <a href="#Inventory">Inventory</a><br>
+<strong>take off</strong> something <a href="#Doff">Doff</a><td>dobj</td><br>
+<strong>taste</strong> something <a href="#Taste">Taste</a><br>
+<strong>tell</strong> topic <a href="#TellAboutImplicit">TellAboutImplicit</a><br>
+<strong>tell</strong> someone <strong>about</strong> topic <a href="#TellAbout">TellAbout</a><br>
+<strong>tell</strong> someone <strong>that</strong> topic <a href="#SayTo">SayTo</a><br>
+<strong>tell</strong> someone <strong>to</strong> literal <a href="#TellTo">TellTo</a><br>
+<strong>tell me about</strong> topic <a href="#AskAboutImplicit">AskAboutImplicit</a><br>
+<strong><span class="system">terse</span></strong> <a href="#Brief">Brief</a><br>
+<strong>test</strong> literal <a href="#DoTest">DoTest</a><br>
+<strong>think</strong> <a href="#Think">Think</a><br>
+<strong>think about</strong> topic <a href="#ThinkAbout">ThinkAbout</a><br>
+<strong>throw</strong> something <a href="#Throw">Throw</a><br>
+<strong>throw</strong> something direction <a href="#ThrowDir">ThrowDir</a><br>
+<strong>throw</strong> someone something <a href="#ThrowTo">ThrowTo</a><br>
+<strong>throw</strong> something <strong>at</strong> something <a href="#ThrowAt">ThrowAt</a><br>
+<strong>throw</strong> something <strong>to/to the</strong> direction <a href="#ThrowDir">ThrowDir</a><br>
+<strong>throw</strong> something <strong>to</strong> someone <a href="#ThrowTo">ThrowTo</a><br>
+<strong>throw d/down</strong> something <a href="#ThrowDir">ThrowDir</a><br>
+<strong>topics</strong> <a href="#Topics">Topics</a><br>
+<strong>toss</strong> something <a href="#Throw">Throw</a><br>
+<strong>toss</strong> something direction <a href="#ThrowDir">ThrowDir</a><br>
+<strong>toss</strong> something <strong>at</strong> something <a href="#ThrowAt">ThrowAt</a><br>
+<strong>toss</strong> something <strong>to/to the</strong> direction <a href="#ThrowDir">ThrowDir</a><br>
+<strong>toss</strong> something <strong>to</strong> someone <a href="#ThrowTo">ThrowTo</a><br>
+<strong>touch</strong> something <a href="#Feel">Feel</a><br>
+<strong>turn</strong> something <a href="#Turn">Turn</a><br>
+<strong>turn</strong> something <strong>off</strong> <a href="#SwitchOff">SwitchOff</a><br>
+<strong>turn</strong> something <strong>on</strong> <a href="#SwitchOn">SwitchOn</a><br>
+<strong>turn</strong> something <strong>to</strong> literal <a href="#TurnTo">TurnTo</a><br>
+<strong>turn</strong> something <strong>with</strong> something <a href="#TurnWith">TurnWith</a><br>
+<strong>turn off</strong> something <a href="#SwitchOff">SwitchOff</a><br>
+<strong>turn on</strong> something <a href="#SwitchOn">SwitchOn</a><br>
+<strong>twist</strong> something <a href="#Turn">Turn</a><br>
+<strong>twist</strong> something <strong>to</strong> literal <a href="#TurnTo">TurnTo</a><br>
+<strong>twist</strong> something <strong>with</strong> something <a href="#TurnWith">TurnWith</a><br>
+<strong>type</strong> literal <a href="#Type">Type</a><br>
+<strong>type</strong> literal <strong>on</strong> something <a href="#TypeOn">TypeOn</a><br>
+<strong>type on</strong> something <a href="#TypeOnVague">TypeOnVague</a><br>
+
+<h3><a name="U">U</a></h3>
+<strong>u</strong> <a href="#Travel">Travel</a><br>
+<strong>unbuckle</strong> something <a href="#Unfasten">Unfasten</a><br>
+<strong>unbuckle</strong> something <strong>from</strong> something <a href="#UnfastenFrom">UnfastenFrom</a><br>
+<strong><span class="system">undo</span></strong> <a href="#Undo">Undo</a><br>
+<strong>unfasten</strong> something <a href="#Unfasten">Unfasten</a><br>
+<strong>unfasten</strong> something <strong>from</strong> something <a href="#UnfastenFrom">UnfastenFrom</a><br>
+<strong>unlock</strong> something <a href="#Unlock">Unlock</a><br>
+<strong>unlock</strong> something <strong>with</strong> something <a href="#UnlockWith">UnlockWith</a><br>
+<strong>unplug</strong> something <a href="#Unplug">Unplug</a><br>
+<strong>unplug</strong> something <strong>from</strong> something <a href="#UnplugFrom">UnplugFrom</a><br>
+<strong>unscrew</strong> something <a href="#Unscrew">Unscrew</a><br>
+<strong>unscrew</strong> something <strong>with</strong> something <a href="#UnscrewWith">UnscrewWith</a><br>
+<strong>up</strong> <a href="#Travel">Travel</a><br>
+
+<h3><a name="V">V</a></h3>
+<strong><span class="system">verbose</span></strong> <a href="#Verbose">Verbose</a><br>
+<strong><span class="system">version</span></strong> <a href="#Version">Version</a><br>
+
+<h3><a name="W">W</a></h3>
+<strong>wait</strong> <a href="#Wait">Wait</a><br>
+<strong>walk</strong>  <a href="#VagueTravel">VagueTravel</a><br>
+<strong>walk</strong> direction <a href="#Travel">Travel</a><br>
+<strong>walk down</strong> <a href="#ClimbDownVague">ClimbDownVague</a><br>
+<strong>walk down</strong> something <a href="#ClimbDown">ClimbDown</a><br>
+<strong>walk in/inside/in to/into</strong> something <a href="#Enter">Enter</a><br>
+<strong>walk through/thru</strong> something <a href="#GoThrough">GoThrough</a><br>
+<strong>walk to|to the</strong> direction <a href="#Travel">Travel</a><br>
+<strong>walk to</strong> somewhere <a href="#GoTo">GoTo</a><br>
+<strong>walk up</strong> <a href="#ClimbUpVague">ClimbUpVague</a><br>
+<strong>walk up</strong> something <a href="#ClimbUp">ClimbUp</a><br>
+<strong>wear</strong> something <a href="#Wear">Wear</a><br>
+<strong>what/when/where/whether/who</strong> topic <a href="#Query">Query</a><br>
+<strong><span class="system">wordy</span></strong> <a href="#Verbose">Verbose</a><br>
+<strong>would</strong> topic <a href="#Query">Query</a><br>
+<strong>wreck</strong> something <a href="#Break">Break</a><br>
+<strong>write</strong> literal <a href="#Write">Write</a><br>
+<strong>write</strong> literal <strong>in/on</strong> something <a href="#WriteOn">WriteOn</a><br>
+
+<h3><a name="X">X</a></h3>
+<strong>x</strong> something <a href="#Examine">Examine</a><br>
+
+<h3><a name="Y">Y</a></h3>
+<strong>yell</strong> <a href="#Yell">Yell</a><br>
+<strong>yes</strong> <a href="#SayYes">SayYes</a><br>
+
+<h3><a name="Z">Z</a></h3>
+<strong>z</strong> <a href="#Wait">Wait</a><br>
+
+<p>
+
+<h2><a name="actionlist">Action List</a></h2>
+
+<p>The table below lists each of the actions defined in the adv3Lite library, and summarizes the effects of each action and the conditions under which it is allowed to proceed. The purpose is to give game authors a quick reference to the main properties they may need to customize to allow an action to go ahead or explain why it can't. <span class="system">System actions</span> and <span class="debug">debugging actions</span> are listed in a different colour, since game code is less likely to need to customize these.</p>
+
+<p>The table deals with three classes of action: (1) those that take no Thing objects (IActions, SystemActions, TopicActions and LiteralActions); (2) those that take one Thing object (TActions, TopicTActions and LiteralTActions) and (3) those that take two Thing objects (TIActions). Class (1) and (2) actions are listed in a single row of the table; class (3) actions take two rows. Class (1) actions have a dash in the <strong>obj</strong> column (indicating that no objects are involved). Class (2) actions have 'dobj' in the <strong>obj</strong> column, indicating that the information given relates to the direct object of the action. Class (3) actions have 'dobj' in the <strong>obj</strong> column in the first row, and 'iobj' in the <strong>obj</strong> column in the second row, indicating that the information given in each row relates to the direct object and indirect objects of the action respectively.</p>
+
+<p>For Class (2) and (3) actions the remaining columns relate to how the action handling is defined on the Thing class. The <strong>Verify Property/Condition</strong> column holds the name of the basic property that must be true for the action to go ahead with that object, together with the default value of that property in the form <span class="code">propName = val</span>. For example, the basic property determining whether something can be opened is <span class="code">isOpenable</span>, which is nil by default on Thing, so it appears as <span class="code">isOpenable = nil</span>. Sometimes this property depends on the value of another property, e.g. <span class="code">isTakeable = !isFixed</span>, meaning a Thing is takeable if it is not fixed in place. Occasionally this colummn just holds the value nil, which means that the verfy routine on Thing fails the action unconditionally (as is mainly the case with conversational actions).</p>
+
+<p>The <strong>Failure Message</strong> column then holds the name of the property that defines the message to be displayed if the action fails on account of not meeting the Verify Property/Condition requirement. For example, if the player attempts to OPEN an object whose <span class="code">isOpenable</span> property is nil, the object's <span class="code">cannotOpenMsg</span> property is displayed. Knowing this property name makes it easy for game authors to customize the failure messages on particular objects or classes of object.</p>
+
+<p>The <strong>Action Result</strong> column attempts to summarize the <em>main</em> result of the action if it is allowed to proceed. Note that actions may have additional side effects not shown in the table. Where an entry is blank, no action results are defined for that action on Thing. Where the action column contains an entry like <span class="code">report { DMsg (so and so) }</span>, this means that the action method does nothing, but the report phase displays the report indicated. Occasionally there is a link to another class name, such as Key; this means that more significant handling for the action is defined on the class in question and that clicking on the link will take you to an appropriate code extract where you can see the details of the handling on that class.</p>
+
+<p>For Class (1) actions there are no verify routines and no corresponding properties, but where it is possible to summarize the conditions under which a Class (1) action might fail and the message that would then be displayed, this information is given in the appropriate column. The outcome of Class (1) actions is summarized in the <strong>Action Result</strong> column.</p>
+
+<p>A blank cell indicates that the library defines no verify or action routine (as the case may be) for the action in question on Thing (though action handling may be defined on other classes). Actions with blank entries in the <strong>Action Result</strong> column do nothing on the Thing class (and will normally be failed at the verify stage).</p>
+
+<p>Sometimes the verification conditions or action outcomes are simply too complicated to be usefully summarized in the table. Where that is the case a row of three asterisks (* * *) appears instead. If the asterisks are hyperlinked, you can click on the link to view a relevant code extract which should give you the full picture.</p>
+
+<p>In any case a table like this can hardly give the full picture except for the very simplest cases. In particular, the properties listed in the <strong>Verify Property/Condition</strong> column are simply those relating to whether an action can succeed on an object because of the type of object it is. For example, there is no prospect of an OPEN command operating on an object unless that object is openable (isOpenable = true), but while <span class="code">isOpenable = true</span> is a necessary condition for the OPEN command to work, it may not be sufficient. An OPEN command will also fail, for example, if the object in question is already open, or if it is locked. In some cases the presence of further such information is indicated in the table by a hyperlinked double asterisk (<a href="#actionlist">**</a>); clicking on the link will take you to a code extract that should give you a fuller picture.</p>
+
+<p>For some types of customization there will be no substitute for consulting the full library source code. The table below should, however, hopefully reduce the need to do so by listing the properties you will most commonly need to override.</p>
+
+<p><a href="#aA">A</a> <a href="#aB">B</a> <a href="#aC">C</a> <a href="#aD">D</a> <a href="#aE">E</a> <a href="#aF">F</a> <a href="#aG">G</a> <a href="#aH">H</a> <a href="#aI">I</a> <a href="#aJ">J</a> <a href="#aK">K</a> <a href="#aL">L</a> <a href="#aM">M</a> <a href="#N">N</a> <a href="#aO">O</a> <a href="#aP">P</a> <a href="#aQ">Q</a> <a href="#aR">R</a> <a href="#aS">S</a> <a href="#aT">T</a> <a href="#aU">U</a> <a href="#uV">V</a> <a href="#aW">W</a> X <a href="#aY">Y</a> Z</p>
+
+<table rules=all border=2 cellpadding=2 cellspacing=2>
+<tbody>
+<tr><td><strong>Action</strong></td><td><strong>obj</strong></td><td><strong>Verify Property/Condition</strong></td><td><strong>Failure Message</strong></td><td><strong>Action Result</strong></td>
+
+
+<tr><td><strong><a name="aA">A</a></strong></td></tr>
+<tr><td><a name="About"></a><span class="system">About</span></td><td> &mdash;</td><td></td><td></td><td>versionInfo.showAbout()</td></tr>
+<tr><td><a name="Again"></a><span class="system">Again</span></td><td>&mdash;</td><td></td><td></td><td><a href="source.htm#Again">* * *</a></td></tr>
+<tr><td><a name="AskAbout"></a>AskAbout</td><td>dobj</td><td>nil</td><td>cannotTalkToMsg</td><td></td></tr>
+<tr><td><a name="AskAboutImplicit"></a>AskAboutImplicit</td><td>&mdash;</td><td></td><td></td><td>[<a href="source.htm#ImplicitConversationAction">ImplicitConversationAction</a>]</td></tr>
+<tr><td><a name="AskFor"></a>AskFor</td><td>dobj</td><td>nil</td><td>cannotTalkToMsg</td><td></td></tr>
+<tr><td><a name="AskForImplicit"></a>AskForImplicit</td><td>&mdash;</td><td></td><td></td><td>[<a href="source.htm#ImplicitConversationAction">ImplicitConversationAction</a>]</td></tr>
+<tr><td><a name="Attach"></a>Attach</td><td>dobj</td><td>isAttachable = nil</td><td>cannotAttachMsg</td><td>askForIobj(AttachTo)</td></tr>
+<tr><td><a name="AttachTo"></a>AttachTo</td><td>dobj</td><td>isAttachable = nil</td><td>cannotAttachMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canAttachToMe = nil</td><td>cannotAttachToMsg</td><td></td></tr>
+<tr><td><a name="Attack"></a>Attack</td><td>dobj</td><td>isAttackable = nil</td><td>cannotAttackMsg</td><td></td></tr>
+<tr><td><a name="AttackWith"></a>AttackWith</td><td>dobj</td><td>isAttackable = nil</td><td>cannotAttackMsg</td><td></td></tr></tr>
+<tr><td></td><td>iobj</td><td>canAttackWithMe = nil</td><td>cannotAttackWithMsg</td><td></td></tr>
+<tr><td><strong><a name="aB">B</a></strong></td></tr>
+<tr><td><a name="Board"></a>Board</td><td>dobj</td><td>isBoardable = nil</td><td>cannotBoardMsg</td><td>gActor.actionMoveInto(self)</td></tr>
+<tr><td><a name="Break"></a>Break</td><td>dobj</td><td>isBreakable = true</td><td>cannotBreakMsg</td><td></td></tr>
+<tr><td><a name="Brief"></a><span class="system">Brief</span></td><td>&mdash;</td><td></td><td></td><td>gameMain.verbose = nil</td></tr>
+<tr><td><a name="Burn"></a>Burn</td><td>dobj</td><td>isBurnable = nil</td><td>cannotBurnMsg</td><td></td></tr>
+<tr><td><a name="BurnWith"></a>BurnWith</td><td>dobj</td><td>isBurnable = nil</td><td>cannotBurnMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canBurnWithMe = nil</td><td>cannotBurnWithMsg</td><td></td></tr>
+
+<tr><td><strong><a name="aC">C</a></strong></td></tr>
+<tr><td><a name="Clean"></a>Clean</td><td>dobj</td><td>isCleanable = true</td><td>cannotCleanMsg</td><td>makeCleaned(true)</td></tr>
+<tr><td><a name="CleanWith"></a>CleanWith</td><td>dobj</td><td>isCleanable = true</td><td>cannotCleanMsg</td><td>makeCleaned(true)</td></tr>
+<tr><td></td><td>iobj</td><td>canCleanWithMe = nil</td><td>cannotCleanWithMsg</td><td></td></tr>
+<tr><td><a name="Climb"></a>Climb</td><td>dobj</td><td>isClimbable = nil</td><td>cannotClimbMsg</td><td></td></tr></tr>
+<tr><td><a name="ClimbDown"></a>ClimbDown</td><td>dobj</td><td>canClimbDownMe = isClimbable</td><td>cannotClimbDownMsg</td><td></td></tr></tr>
+<tr><td><a name="ClimbDownVague"></a>ClimbDownVague</td><td> &mdash;</td><td></td><td></td><td>askForDobj(ClimbDown)</td></tr>
+<tr><td><a name="ClimbUp"></a>ClimbUp</td><td>dobj</td><td>canClimbUpMe = isClimbable</td><td>cannotClimbMsg</td><td></td></tr>
+<tr><td><a name="ClimbUpVague"></a>ClimbUpVague</td><td> &mdash;</td><td></td><td></td><td>askForDobj(ClimbUp)</td></tr>
+<tr><td><a name="Close"></a>Close</td><td>dobj</td><td>isCloseable = isOpenable <a href="source.htm#Thing:Close">**</a></td><td>cannotCloseMsg</td><td>makeOpen(nil) <a href="source.htm#Thing:Close">**</a></td></tr>
+<tr><td><a name="ConsultAbout"></a>ConsultAbout</td><td>dobj</td><td>isConsultable</td><td>cannotConsultMsg</td><td></td></tr>
+<tr><td><a name="ConsultWhatAbout"></a>ConsultWhatAbout</td><td> &mdash;</td><td></td><td></td><td>askForDobj(ConsultAbout)</td></tr>
+<tr><td><a name="Continue"></a>Continue</td><td> &mdash;</td><td></td><td></td><td><a href="source.htm#Continue">* * *</a></td></tr></tr>
+<tr><td><a name="Credits"></a><span class="system">Credits</span></td><td> &mdash;</td><td></td><td></td><td>versionInfo.showCredit()</td></tr>
+<tr><td><a name="Cut"></a>Cut</td><td>dobj</td><td>isCuttable = nil</td><td>cannotCutMsg</td><td>askForIobj(CutWith)</td></tr>
+<tr><td><a name="CutWith"></a>CutWith</td><td>dobj</td><td>isCuttable = nil</td><td>cannotCutMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canCutWithMe = nil</td><td>cannotCutWithMsg</td><td></td></tr>
+
+<tr><td><strong><a name="aD">D</a></strong></td></tr>
+<tr><td><a name="Debug"></a><span class="debug">Debug</span><td>&mdash;</td><td></td><td></td><td><a href="source.htm#Debug">* * *</a></td></tr>
+<tr><td><a name="DebugI"></a><span class="debug">DebugI</span></td><td>&mdash;</td><td>t3DebugTrace(T3DebugCheck)</td><td>DMsg(debugger not present)</td><td>t3DebugTrace(T3DebugBreak)</td></tr>
+<tr><td><a name="Detach"></a>Detach</td><td>dobj</td><td>isDetachable = nil</td><td>cannotDetachMsg</td><td></td></tr>
+<tr><td><a name="DetachFrom"></a>DetachFrom</td><td>dobj</td><td>isDetachable = nil</td><td>cannotDetachMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canDetachFromMe = nil</td><td>cannotDetachFromMsg</td><td></td></tr>
+<tr><td><a name="Dig"></a>Dig</td><td>dobj</td><td>isDiggable = nil</td><td>cannotDigMsg</td><td>askForIobj(DigWith)</td></tr>
+<tr><td><a name="DigWith"></a>DigWith</td><td>dobj</td><td>isDiggable = nil</td><td>cannotDigMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canDigWithMe = nil</td><td>cannotDigWithMsg</td><td></td></tr>
+<tr><td><a name="Doff"></a>Doff</td><td>dobj</td><td>isDoffable = isWearable <a href="source.htm#Thing:Doff">**</a></td><td>cannotDoffMsg</td><td>makeWorn(nil)</td></tr>
+<tr><td><a name="DoTest"></a><span class="debug">DoTest</span></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>run test script</td></tr>
+<tr><td><a name="Drink"></a>Drink</td><td>dobj</td><td>isDrinkable = nil</td><td>cannotDrinkMsg</td><td></td></tr>
+<tr><td><a name="Drop"></a>Drop</td><td>dobj</td><td>isDroppable = true</td><td>cannotDropMsg</td><td>actionMoveInto(gActor.location.dropLocation);</td></tr>
+
+<tr><td><strong><a name="aE">E</a></strong></td></tr>
+<tr><td><a name="Eat"></a>Eat</td><td>dobj</td><td>isEdible = nil</td><td>cannotEatMsg</td><td>moveInto(nil)</td></tr>
+<tr><td><a name="Enter"></a>Enter</td><td>dobj</td><td>isEnterable = nil</td><td>cannotEnterMsg</td><td>gActor.actionMoveInto(self)</td></tr>
+<tr><td><a name="EnterOn"></a>EnterOn</td><td>dobj</td><td>canEnterOnMe = nil</td><td>cannotEnterOnMsg</td><td></td></tr>
+<tr><td><a name="Evaluate"></a><span class="debug">Evaluate</span></td></td><td>&mdash;</td><td></td><td></td><td>Compiler.eval(stripQuotesFrom(cmd.dobj.name))</td></tr>
+<tr><td><a name="Examine"></a>Examine</td><td>dobj</td><td></td><td></td><td>desc; examineStatus(); <a href="source.htm#Thing:Examine">**</a></td></tr>
+<tr><td><a name="Exits"></a><span class="system">Exits</span></td><td> &mdash;</td><td>gExitLister != nil</td><td>DMsg(no exit lister)</td><td>gExitLister.showExitsCommand()</td></tr>
+<tr><td><a name="ExitsColour"></a><span class="system">ExitsColour</span></td><td> &mdash;</td><td>gExitLister != nil</td><td>DMsg(no exit lister)</td><td><a href="source.htm#ExitsColour">* * *</a> </td></tr>
+<tr><td><a name="ExitsMode"></a><span class="system">ExitsMode</span></td><td> &mdash;</td><td>gExitLister != nil</td><td>DMsg(no exit lister)</td><td>gExitLister.exitsOnOffCommand(stat, stat)</td></tr>
+<tr><td><a name="Extinguish"></a>Extinguish</td><td>dobj</td><td>isExtinguishable = true</td><td>cannotExtinguishMsg</td><td>makeLit(nil)</td></tr>
+
+<tr><td><strong><a name="aF">F</a></strong></td></tr>
+<tr><td><a name="Fasten"></a>Fasten</td><td>dobj</td><td>isFastenable = nil</td><td>cannotFastenMsg</td><td>makeFastened(true)</td></tr>
+<tr><td><a name="FastenTo"></a>FastenTo</td><td>dobj</td><td>isFastenable = nil</td><td>cannotFastenMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canFastenToMe = nil</td><td>cannotFastenToMsg</td><td></td></tr>
+<tr><td><a name="Feel"></a>Feel</td><td>dobj</td><td>isFeelable = true</td><td>cannotFeelMsg</td><td> display(&amp;feelDesc);</td></tr>
+<tr><td><a name="FiatLux"></a><span class="debug">FiatLux</span></td><td>&mdash;</td><td></td><td></td><td>gPlayerChar.isLit = !gPlayerChar.isLit</td></tr>
+<tr><td><a name="Flip"></a>Flip</td><td>dobj</td><td>isFlippable = isSwitchable</td><td>cannotFlipMsg</td><td></td></tr>
+<tr><td><a name="Follow"></a>Follow</td><td>dobj</td><td>isFollowable = nil</td><td>cannotFollowMsg</td><td></td></tr>
+<tr><td><a name="FullScore"></a><span class="system">FullScore</span></td></td><td> &mdash;</td><td><td></td></td><td>libGlobal.scoreObj.showFullScore()</td></tr>
+
+<tr><td><strong><a name="aG">G</a></strong></td></tr>
+<tr><td><a name="GetOff"></a>GetOff</td><td>dobj</td><td>gActor.isIn(self)</td><td>actorNotOnMsg</td><td>gActor.actionMoveInto(exitLocation)</td></tr>
+<tr><td><a name="GetOut"></a>GetOut</td></td><td> &mdash;</td><td><td></td></td><td>GoOut.execAction(cmd)</td></tr>
+<tr><td><a name="GetOutOf"></a>GetOutOf</td><td>dobj</td><td>gActor.isIn(self)</td><td>actorNotInMsg</td><td>gActor.actionMoveInto(exitLocation)</td></tr>
+<tr><td><a name="GiveTo"></a>GiveTo</td><td>dobj</td><td>!isIn(gIobj)</td><td>alreadyHasMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>nil</td><td>cannotGiveToMsg</td><td></td></tr>
+<tr><td><a name="GiveToImplicit"></a>GiveToImplicit</td><td>dobj</td><td>* * *</td><td></td><td><font size=-5>gPlayerChar.currentInterlocutor.handleTopic(&amp;giveTopics, [self])</font></td></tr>
+<tr><td><a name="GoBack"></a>GoBack</td><td> &mdash;</td><td></td><td></td><td><a href="source.htm#GoBack">* * *</a> </td></tr></tr>
+<tr><td><a name="Goodbye"></a>Goodbye</td><td>&mdash;</td><td><font size=-5>gPlayerChar.currentInterlocutor != nil</font></td><td>DMsg(not talking)</td><td><font size=-5>gPlayerChar.currentInterlocutor.endConversation(endConvBye)</font></td></tr></tr>
+<tr><td><a name="GoIn"></a>GoIn</td></td><td> &mdash;</td><td><td></td></td><td><a href="source.htm#GoIn">[Travel]</a></td></tr>
+<tr><td><a name="GoNear"></a><span class="debug">GoNear</span></td><td>dobj</td><td><a href="source.htm#Thing:GoNear">* * *</a></td><td></td><td>getOutermostRoom.travelVia(gActor); <a href="source.htm#Thing:GoNear">**</a></td></tr>
+<tr><td><a name="GoThrough"></a>GoThrough</td><td>dobj</td><td>canGoThroughMe = nil</td><td>cannotGoThroughMsg</td><td></td></tr>
+<tr><td><a name="GoTo"></a>GoTo</td><td>dobj</td><td><a href="source.htm#Thing:GoTo">* * *</a></td><td></td><td><a href="source.htm#Thing:GoTo">* * *</a> </td></tr>
+<tr><td><a name="GoOut"></a>GoOut</td></td><td> &mdash;</td><td><td></td></td><td><a href="source.htm#GoOut">[Travel or GetOff]</a></td></tr>
+
+<tr><td><strong><a name="aH">H</a></strong></td></tr>
+<tr><td><a name="Hello"></a>Hello</td><td>&mdash;</td><td></td><td></td><td><a href="source.htm#Hello">* * *</a></td></tr>
+<tr><td><a name="Hints"></a><span class="system">Hints</span></td></td><td> &mdash;</td><td>gHintManager != nil<td>DMsg(hints not present)</td></td><td>gHintManager.showHints()</td></tr>
+<tr><td><a name="HintsOff"></a><span class="system">HintsOff</span></td></td><td> &mdash;</td><td>gHintManager != nil</td><td>DMsg(no hints to disable)</td><td>gHintManager.disableHints()</td></tr>
+
+<tr><td><strong><a name="aI">I</a></strong></td></tr>
+<tr><td><a name="Inventory"></a>Inventory</td></td><td> &mdash;</td><td><td></td></td><td> <a href="source.htm#Inventory">* * *</a></td></tr>
+
+<tr><td><strong><a name="aJ">J</a></strong></td></tr>
+<tr><td><a name="Jump"></a>Jump</td></td><td> &mdash;</td><td><td></td></td><td>DMsg(jump)</td></tr>
+<tr><td><a name="JumpOff"></a>JumpOff</td><td>dobj</td><td><font size=-5>canJumpOffMe = [the actor is on dobj]</font></td><td>cannotJumpOffMsg</td><td>gActor.actionMoveInto(location)</td></tr>
+<tr><td><a name="JumpOffIntransitive"></a>JumpOffIntransitive</td></tr>
+<tr><td><a name="JumpOver"></a>JumpOver</td><td>dobj</td><td>canJumpOverMe = nil</td><td>cannotJumpOverMsg</td><td></td></tr>
+
+<tr><td><strong><a name="aK">K</a></strong></td></tr>
+<tr><td><a name="Kiss"></a>Kiss</td><td>dobj</td><td>isKissable = true</td><td>cannotKissMsg</td><td>report { DMsg(kiss) }</td></tr>
+
+<tr><td><strong><a name="aL">L</a></strong></td></tr>
+<tr><td><a name="Lie"></a>Lie</td><td> &mdash;</td><td></td><td></td><td>askForDobj(LieOn)</td></tr></tr>
+<tr><td><a name="LieIn"></a>LieIn</td><td>dobj</td><td>asDobjFor(Enter)</td><td>cannotEnterMsg</td><td>asDobjFor(Enter)</td></tr>
+<tr><td><a name="LieOn"></a>LieOn</td><td>dobj</td><td>canLieOnMe = isBoardable</td><td>cannotLieOnMsg</td><td>asDobjFor(Board)</td></tr>
+<tr><td><a name="Light"></a>Light</td><td>dobj</td><td>isLightable = nil</td><td>cannotLightMsg</td><td>makeLit(true)</td></tr>
+<tr><td><a name="Listen"></a>Listen</td></td><td> &mdash;</td><td><td></td></td><td><a href="source.htm#Listen">* * *</a></td></tr>
+<tr><td><a name="ListenTo"></a>ListenTo</td><td>dobj</td><td></td><td></td><td>display(&amp;listenDesc);</td></tr>
+<tr><td><a name="ListTests"></a><span class="debug">ListTests</span></td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>list available test scripts</td></tr>
+<tr><td><a name="Lock"></a>Lock</td><td>dobj</td><td>lockability = notLockable <a href="source.htm#Thing:Lock">**</a></td><td>notLockableMsg</td><td>makeLocked(true) <a href="source.htm#Thing:Lock">**</a></td></tr>
+<tr><td><a name="LockWith"></a>LockWith</td><td>dobj</td><td>lockability = notLockable <a href="source.htm#Thing:LockWith">**</a></td><td>notLockableMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canLockWithMe = canUnlockWithMe</td><td>cannotLockWithMsg</td><td><a href="source.htm#Key:LockWith">Key</a></td></tr>
+<tr><td><a name="LookBehind"></a>LookBehind</td><td>dobj</td><td>canLookBehindMe = true</td><td>cannotLookBehindMsg</td><td><a href="source.htm#Thing:LookBehind">* * *</a></td></tr></tr>
+<tr><td><a name="Look"></a>Look</td><td> - </td><td></td><td></td><td>gActor.outermostVisibleParent().lookAroundWithin()</td></tr>
+<tr><td><a name="LookIn"></a>LookIn</td><td>dobj</td><td></td><td></td><td><a href="source.htm#Thing:LookIn">* * *</a></td></tr>
+<tr><td><a name="LookThrough"></a>LookThrough</td><td>dobj</td><td>canLookThroughMe = true</td><td>cannotLookThroughMsg</td><td>say(lookThroughMsg)</td></tr>
+<tr><td><a name="LookUnder"></a>LookUnder</td><td>dobj</td><td>canLookUnderMe = true</td><td>cannotLookUnderMsg</td><td><a href="source.htm#Thing:LookUnder">* * *</a></td></tr>
+
+<tr><td><strong><a name="aM">M</a></strong></td></tr>
+<tr><td><a name="Move"></a>Move</td><td>dobj</td><td>isMoveable = !isFixed</td><td>cannotMoveMsg</td><td>report { DMsg(move no effect); }</td></tr>
+<tr><td><a name="MoveTo"></a>MoveTo</td><td>dobj</td><td>isMoveable = !isFixed</td><td>cannotMoveMsg</td><td>makeMovedTo(gIobj)</td></tr>
+<tr><td></td><td>iobj</td><td>canMoveToMe = true</td><td>cannotMoveToMsg</td><td></td></tr>
+<tr><td><a name="MoveWith"></a>MoveWith</td><td>dobj</td><td>isMoveable = !isFixed</td><td>cannotMoveMsg</td><td>report { DMsg(move no effect); }</td></tr>
+<tr><td></td><td>iobj</td><td>canMoveWithMe = nil</td><td>cannotMoveWithMsg</td><td></td></tr>
+
+<tr><td><strong><a name="aN">N</a></strong></td></tr>
+<tr><td><a name="Notify"></a><span class="system">Notify</span></td></td><td> &mdash;</td><td><td></td></td><td> * * * </td></tr>
+<tr><td><a name="NotifyOff"></a><span class="system">NotifyOff</span></td></td><td> &mdash;</td><td><td></td></td><td><font size=-5>libGlobal.scoreObj.showNotify.isOn = nil</font></td></tr>
+<tr><td><a name="NotifyOn"></a><span class="system">NotifyOn</span></td></td><td> &mdash;</td><td><td></td></td><td><font size=-5>libGlobal.scoreObj.scoreNotify.isOn = true</font></td></tr>
+
+<tr><td><strong><a name="aO">O</a></strong></td></tr>
+<tr><td><a name="Open"></a>Open</td><td>dobj</td><td>isOpenable = nil <a href="source.htm#Thing:Open">**</a></td><td>cannotOpenMsg</td><td>makeOpen(true) <a href="source.htm#Thing:Open">**</a></td></tr>
+
+<tr><td><strong><a name="aP">P</a></strong></td></tr>
+<tr><td><a name="PlugIn"></a>PlugIn</td><td>dobj</td><td>isPlugable = nil</td><td>cannotPlugMsg</td><td></td></tr>
+<tr><td><a name="PlugInto"></a>PlugInto</td><td>dobj</td><td>isPlugable = nil</td><td>cannotPlugMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canPlugIntoMe = nil</td><td>cannotPlugIntoMsg</td><td></td></tr>
+<tr><td><a name="Pour"></a>Pour</td><td>dobj</td><td>isPourable = nil</td><td>cannotPourMsg</td><td></td></tr>
+<tr><td><a name="PourInto"></a>PourInto</td><td>dobj</td><td>isPourable = nil</td><td>cannotPourMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td><font size=-5>canPourIntoMe = (contType == In || remapIn != nil)</font></td><td>cannotPourIntoMsg</td><td></td></tr>
+<tr><td><a name="PourOnto"></a>PourOnto</td><td>dobj</td><td>isPourable = nil</td><td>cannotPourMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canPourOntoMe = true</td><td>cannotPourOntoMsg</td><td></td></tr>
+<tr><td><a name="Pull"></a>Pull</td><td>dobj</td><td>isPullable = true</td><td>cannotPullMsg</td><td>say(pullNoEffectMsg)</td></tr>
+<tr><td><a name="Purloin"></a><span class="debug">Purloin</span></td><td>dobj</td><td>!isFixed</td><td>cannotTakeMsg</td><td>moveInto(gActor)</td></tr>
+<tr><td><a name="Push"></a>Push</td><td>dobj</td><td>isPushable = true</td><td>cannotPushMsg</td><td>say(pushNoEffectMsg)</td></tr>
+<tr><td><a name="PushTravelClimbDown"></a>PushTravelClimbDown</td><td>dobj</td><td>canPushTravel = nil</td><td>cannotPushTravelMsg</td><td>doPushTravel(Down) <a href="source.htm#Thing:PushTravelClimbDown">**</a></td></tr>
+<tr><td></td><td>iobj</td><td>canClimbDownMe = nil</td><td>cannotPushDownMsg</td><td></td></tr>
+<tr><td><a name="PushTravelClimbUp"></a>PushTravelClimbUp</td><td>dobj</td><td>canPushTravel = nil</td><td>cannotPushTravelMsg</td><td>doPushTravel(Up) <a href="source.htm#Thing:PushTravelClimbUp">**</</td></tr>
+<tr><td></td><td>iobj</td><td>isClimbable = nil</td><td>cannotPushUpMsg</td><td></td></tr>
+<tr><td><a name="PushTravelDir"></a>PushTravelDir</td><td>dobj</td><td>canPushTravel = nil</td><td>cannotPushTravelMsg</td><td><a href="source.htm#PushTravelDir">* * *</a></td></tr>
+<tr><td><a name="PushTravelEnter"></a>PushTravelEnter</td><td>dobj</td><td>canPushTravel = nil</td><td>cannotPushTravelMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>isEnterable</td><td>cannotPushIntoMsg</td><td><a href="source.htm#Thing:PushTravelEnter">* * *</</td></tr>
+<tr><td><a name="PushTravelGetOutOf"></a>PushTravelGetOutOf</td><td>dobj</td><td>canPushTravel = nil</td><td>cannotPushTravelMsg</td><td><a href="source.htm#Thing:PushTravelGetOutOf">* * *</</td></tr>
+<tr><td></td><td>iobj</td><td>* * *</td><td>* * *</td><td><a href="source.htm#Thing:PushTravelGetOutOuf">* * *</</td></tr>
+<tr><td><a name="PushTravelThrough"></a>PushTravelThrough</td><td>dobj</td><td>canPushTravel = nil</td><td>cannotPushTravelMsg</td><td>doPushTravel(Through) <a href="source.htm#Thing:PushTravelThrough">**</</td></tr>
+<tr><td></td><td>iobj</td><td>canGoThroughMe = nil</td><td>cannotPushThroughMsg</td></tr>
+<tr><td><a name="PutBehind"></a>PutBehind</td><td>dobj</td><td>!isFixed <a href="source.htm#Thing:dobjPutBehind">**</a></td><td>cannotTakeMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canPutBehindMe = (contType == Behind) <a href="source.htm#Thing:iobjPutBehind">**</a> </td><td>cannotPutBehindMsg</td><td>gDobj.actionMoveInto(self) <a href="source.htm#Thing:iobjPutBehind">**</a></td></tr>
+<tr><td><a name="PutIn"></a>PutIn</td><td>dobj</td><td>!isFixed <a href="source.htm#Thing:dobjPutIn">**</a></td><td>cannotTakeMsg </td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canPutInMe = (contType == In) <a href="source.htm#Thing:iobjPutIn">**</a></td><td>cannotPutInMsg</td><td>gDobj.actionMoveInto(self) <a href="source.htm#Thing:iobjPutIn">**</a></td></tr>
+<tr><td><a name="PutOn"></a>PutOn</td><td>dobj</td><td>!isFixed <a href="source.htm#Thing:dobjPutOn">**</a></td><td>cannotTakeMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>contType == On <a href="source.htm#Thing:iobjPutOn">**</a></td><td>cannotPutOnMsg</td><td>gDobj.actionMoveInto(self) <a href="source.htm#Thing:iobjPutOn">**</a></td></tr>
+<tr><td><a name="PutUnder"></a>PutUnder</td><td>dobj</td><td>!isFixed <a href="source.htm#Thing:dobjPutUnder">**</a></td><td>cannotTakeMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canPutUnderMe = (contType == Under) <a href="source.htm#Thing:iobjPutUnder">**</a></td><td>cannotPutUnderMsg</td><td>gDobj.actionMoveInto(self) <a href="source.htm#Thing:iobjPutUnder">**</a></td></tr>
+
+<tr><td><strong><a name="aQ">Q</a></strong></td></tr>
+<tr><td><a name="Query"></a>Query</td><td>&mdash;</td><td></td><td></td><td>[ImplicitConversationAction]</td></tr>
+<tr><td><a name="QueryAbout"></a>QueryAbout</td><td>&mdash;</td><td>nil</td><td>cannotTalkToMsg</td><td></td><td></td></tr>
+<tr><td><a name="QueryVague"></a>QueryVague</td><td> &mdash;</td><td></td><td></td><td>[MiscConvAction]</td></tr></tr>
+<tr><td><a name="Quit"></a><span class="system">Quit</span></td><td> &mdash;</td><td></td><td></td><td>throw new QuittingException</td></tr>
+
+<tr><td><strong><a name="aR">R</a></strong></td></tr>
+<tr><td><a name="Read"></a>Read</td><td>dobj</td><td><Font size=-5>isReadable = propType(&amp;readDesc) != TypeNil</FONT></td><td>cannotReadMsg</td><td>display(&amp;readDesc);</td></tr>
+<tr><td><a name="Record"></a><span class="system">Record</span></td><td>&mdash;</td><td></td><td></td><td>* * *</td></tr>
+<tr><td><a name="RecordEvents"></a><span class="system">RecordEvents</span></td><td>&mdash;</td><td></td><td></td><td>* * *</td></tr>
+<tr><td><a name="RecordOff"></a><span class="system">RecordOff</span></td><td>&mdash;</td><td></td><td></td><td>* * *</td></tr>
+<tr><td><a name="Remove"></a>Remove</td><td>dobj</td><td>isRemoveable = isTakeable</td><td>cannotRemoveMsg</td><td>removeDoer:doInstead(Take|Doff)</td></tr>
+<tr><td><a name="Replay"></a><span class="system">Replay</span></td><td>&mdash;</td><td></td><td></td><td>* * *</td></tr>
+<tr><td><a name="Restart"></a><span class="system">Restart</span></td><td> &mdash;</td><td></td><td></td><td>throw new RestartSignal</td></tr>
+<tr><td><a name="Restore"></a><span class="system">Restore</span><td>&mdash;</td><td></td><td></td><td>askAndRestore()</td></td></tr>
+
+<tr><td><strong><a name="aS">S</a></strong></td></tr>
+<tr><td><a name="Save"></a><span class="system">Save</span></td><td>&mdash;</td><td></td><td></td><td>* * *</td></tr>
+<tr><td><a name="Say"></a>Say</td><td>&mdash;</td><td></td><td></td><td>[<a href="source.htm#ImplicitConversationAction">ImplicitConversationAction</a>]</td></tr>
+<tr><td><a name="SayNo"></a>SayNo</td><td> &mdash;</td><td></td><td></td><td>[MiscConvAction]</td></tr>
+<tr><td><a name="SayTo"></a>SayTo</td><td>dobj</td><td>nil</td><td>cannotTalkToMsg</td><td></td><td></td></tr>
+<tr><td><a name="SayYes"></a>SayYes</td><td> &mdash;</td><td></td><td></td><td>[MiscConvAction]</td></tr>
+<tr><td><a name="Screw"></a>Screw</td><td>dobj</td><td>isScrewable = nil</td><td>cannotScrewMsg</td><td></td></tr>
+<tr><td><a name="ScrewWith"></a>ScrewWith</td><td>dobj</td><td>isScrewable = nil</td><td>cannotScrewMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canScrewWithMe = nil</td><td>cannotScrewWithMsg</td><td></td></tr>
+<tr><td><a name="Search"></a>Search</td><td>dobj</td><td>asDobjFor(LookIn)</td><td></td><td>asDobjFor(<a href="#LookIn">LookIn</a>)</td></tr>
+<tr><td><a name="Set"></a>Set</td><td>dobj</td><td>isSettable = nil</td><td>cannotSetMsg</td><td></td></tr> 
+<tr><td><a name="SetTo"></a>SetTo</td><td>dobj</td><td>canSetMeTo = nil</td><td>cannotSetToMsg</td><td>makeSetting(gLiteral)</td></tr>
+<tr><td><a name="Sit"></a>Sit</td><td> &mdash;</td><td></td><td></td><td>askForDobj(SitOn)</td></tr>
+<tr><td><a name="SitIn"></a>SitIn</td><td>dobj</td><td>asDobjFor(Enter)</td><td>cannotEnterMsg</td><td>asDobjFor(Enter)</td></tr>
+<tr><td><a name="SitOn"></a>SitOn</td><td>dobj</td><td>canSitOnMe = isBoardable</td><td>cannotSitOnMsg</td><td>asDobjFor(Board)</td></tr>
+<tr><td><a name="Score"></a><span class="system">Score</span></td><td> &mdash;</td><td><td></td></td><td>libGlobal.scoreObj.showScore()</td></tr>
+<tr><td><a name="ScriptOff"></a><span class="system">ScriptOff</span></td><td>&mdash;</td><td></td><td></td><td>* * *</td></tr>
+<tr><td><a name="ScriptOn"></a><span class="system">ScriptOn</span></td><td>&mdash;</td><td></td><td></td><td>* * *</td></tr>
+<tr><td><a name="ShowTo"></a>ShowTo</td><td>dobj</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>iobj</td><td>nil</td><td>cannotShowToMsg</td><td></td></tr>
+<tr><td><a name="ShowToImplicit"></a>ShowToImplicit</td><td>dobj</td><td>* * *</td><td>* * *</td><td><font size=-5>gPlayerChar.currentInterlocutor.handleTopic(&amp;showTopics, [self])</font></td></tr>
+<tr><td><a name="Sleep"></a>Sleep</td></td><td> &mdash;</td><td><td></td></td><td>DMsg(no sleeping)</td></tr>
+<tr><td><a name="Smell"></a>Smell</td></td><td> &mdash;</td><td><td></td></td><td><a href="source.htm#Smell">* * *</a></td></tr>
+<tr><td><a name="SmellSomething"></a>SmellSomething</td><td>dobj</td><td>isSmellable = true</td><td>cannotSmellMsg</td><td>display(&amp;smellDesc);</td></tr>
+<tr><td><a name="Stand"></a>Stand</td></td><td> &mdash;</td><td><td></td></td><td><font size=-5>replaceAction(GetOff, gActor.location) | DMsg(already standing)</font></td></tr>
+<tr><td><a name="StandIn"></a>StandIn</td><td>dobj</td><td>asDobjFor(Enter)</td><td>cannotEnterMsg</td><td>asDobjFor(Enter)</td></tr>
+<tr><td><a name="StandOn"></a>StandOn</td><td>dobj</td><td>canStandOnMe = isBoardable</td><td>cannotStandOnMsg</td><td>asDobjFor(Board)</td></tr>
+<tr><td><a name="Strike"></a>Strike</td><td>dobj</td><td>asDobjFor(<a href="#Attack">Attack</a>)</td><td></td><td></td></tr>
+<tr><td><a name="SwitchOff"></a>SwitchOff</td><td>dobj</td><td>isSwitchable</td><td>notSwitchableMsg</td><td>makeOn(nil)</td></tr>
+<tr><td><a name="SwitchOn"></a>SwitchOn</td><td>dobj</td><td>isSwitchable</td><td>notSwitchableMsg</td><td>makeOn(true)</td></tr>
+<tr><td><a name="SwitchVague"></a>SwitchVague</td><td>dobj</td><td>isSwitchable</td><td>notSwitchableMsg</td><td>makeOn(!isOn)</td></tr>
+
+<tr><td><strong><a name="aT">T</a></strong></td></tr>
+<tr><td><a name="TalkAbout"></a>TalkAbout</td><td>dobj</td><td>nil</td><td>cannotTalkToMsg</td><td></td></tr>
+<tr><td><a name="TalkAboutImplicit"></a>TalkAboutImplicit</td><td>&mdash;</td><td></td><td></td><td>[<a href="source.htm#ImplicitConversationAction">ImplicitConversationAction</a>]</td></tr>
+<tr><td><a name="TalkTo"></a>TalkTo</td><td>dobj</td><td>nil</td><td>cannotTalkToMsg</td><td></td></tr>
+<tr><td><a name="Take"></a>Take</td><td>dobj</td><td>isTakeable = !isFixed <a href="source.htm#Thing:Take">**</a></td><td>cannotTakeMsg</td><td>actionMoveInto(gActor) <a href="source.htm#Thing:Take">**</a></td></tr>
+<tr><td><a name="TakeFrom"></a>TakeFrom</td><td>dobj</td><td>isTakeable = !isFixed <a href="source.htm#Thing:dobjTakeFrom">**</a></td><td>cannotTakeMsg</td><td>actionDobjTake()</td></tr>
+<tr><td></td><td>iobj</td><td><a href="source.htm#Thing:iobjTakeFrom">* * *</a></td><td></td><td></td></tr>
+<tr><td><a name="Taste"></a>Taste</td><td>dobj</td><td>isTasteable = true</td><td>cannotTasteMsg</td><td>display(&amp;tasteDesc);</td></tr>
+<tr><td><a name="TellAbout"></a>TellAbout</td><td>nil</td><td>cannotTalkToMsg</td><td></td></tr>
+<tr><td><a name="TellAboutImplicit"></a>TellAboutImplicit</td><td>&mdash;</td><td></td><td></td><td>[<a href="source.htm#ImplicitConversationAction">ImplicitConversationAction</a>]</td></tr>
+<tr><td><a name="TellTo"></a>TellTo</td></tr>
+<tr><td><a name="Think"></a>Think</td><td> &mdash;</td><td></td><td></td><td>DMsg(think)</td></tr>
+<tr><td><a name="ThinkAbout"></a>ThinkAbout</td><td>&mdash;</td><td></td><td></td><td><font size=-5>libGlobal.thoughtManagerObj.handleTopic(cmd.dobj.topicList)</font></td></tr>
+<tr><td><a name="Throw"></a>Throw</td><td>dobj</td><td>isThrowable = !isFixed</td><td>cannotThrowMsg</td><td>moveInto(getOutermostRoom)</td></tr>
+<tr><td><a name="ThrowAt"></a>ThrowAt</td><td>dobj</td><td>verifyDobjThrow()</td><td></td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canThrowAtMe = true</td><td>cannotThrowAtMsg</td><td>gDobj.moveInto(getOutermostRoom)</td></tr>
+<tr><td><a name="ThrowDir"></a>ThrowDir</td><td>dobj</td><td>isThrowable = !isFixed</td><td>cannotThrowMsg</td><td>moveInto(getOutermostRoom)</td></tr>
+<tr><td><a name="ThrowTo"></a>ThrowTo</td><td>dobj</td><td>verifyDobjThrow()</td><td></td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canThrowToMe = nil</td><td>cannotThrowToMsg</td><td></td></tr>
+<tr><td><a name="Topics"></a>Topics</td><td> &mdash;</td><td>otherActor != nil</td><td>DMsg(no interlocutor)</td><td>otherActor.showSuggestions(true)</td></tr></tr>
+<tr><td><a name="Travel"></a>Travel</td><td> &mdash;</td><td></td><td></td><td><a href="source.htm#Travel">* * *</a> </td></tr></tr>
+<tr><td><a name="Turn"></a>Turn</td><td>dobj</td><td>isTurnable = true</td><td>cannotTurnMsg</td><td>report{ say(turnNoEffectMsg) }</td></tr>
+<tr><td><a name="TurnTo"></a>TurnTo</td><td>dobj</td><td>canTurnMeTo = nil</td><td>cannotTurnToMsg</td><td>makeSetting(gLiteral)</td></tr>
+<tr><td><a name="TurnWith"></a>TurnWith</td><td>dobj</td><td>isTurnable = true</td><td>cannotTurnMsg</td><td>report{ say(turnNoEffectMsg) }</td></tr></tr>
+<tr><td></td><td>iobj</td><td>canTurnWithMe = nil</td><td>cannotTurnWithMsg</td><td></td></tr>
+<tr><td><a name="Type"></a>Type</td><td> &mdash;</td><td></td><td></td><td>askForIobj(TypeOn)</td></tr>
+<tr><td><a name="TypeOn"></a>TypeOn</td><td>dobj</td><td>canTypeOnMe = nil</td><td>cannotTypeOnMsg</td><td></td></tr>
+<tr><td><a name="TypeOnVague"></a>TypeOnVague</td><td>dobj</td><td>canTypeOnMe = nil</td><td>cannotTypeOnMsg</td><td></td></tr>
+
+<tr><td><strong><a name="aU">U</a></strong></td></tr>
+<tr><td><a name="Unplug"></a>Unplug</td><td>dobj</td><td>isUnplugable = isPlugable</td><td>cannotUnplugMsg</td><td></td></tr></tr>
+<tr><td><a name="UnplugFrom"></a>UnplugFrom</td><td>dobj</td><td>isUnplugable = isPlugable</td><td>cannotUnplugMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canUnplugFromMe = canPlugIntoMe</td><td>cannotUnplugFromMsg</td><td></td></tr>
+<tr><td><a name="Undo"></a><span class="system">Undo</span></td><td> &mdash;</td><td></td><td></td><td>undo()</td>></tr>
+<tr><td><a name="Unfasten"></a>Unfasten</td><td>dobj</td><td>isUnfastenable = nil</td><td>cannotUnfastenMsg</td><td></td></tr>
+<tr><td><a name="UnfastenFrom"></a>UnfastenFrom</td><td>dobj</td><td>isUnfastenable = nil</td><td>cannotUnfastenMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canUnfastenFromMe</td><td>cannotUnfastenFromMsg</td><td></td></tr>
+<tr><td><a name="Unlock"></a>Unlock</td><td>dobj</td><td>lockability = notLockable <a href="source.htm#Thing:Unlock">**</a></td><td>notLockableMsg</td><td>makeLocked(nil) <a href="source.htm#Thing:Unlock">**</a></td></tr>
+<tr><td><a name="UnlockWith"></a>UnlockWith</td><td>dobj</td><td>lockability = notLockable <a href="source.htm#Thing:UnlockWith">**</a></td><td>notLockableMsg</td><td><a href="source.htm#Key:UnlockWith">Key</a></td></tr>
+<tr><td></td><td>iobj</td><td>canUnlockWithMe</td><td>cannotUnlockWithMsg</td><td></td></tr>
+<tr><td><a name="Unscrew"></a>Unscrew</td><td>dobj</td><td>isUnscrewable = isScrewable</td><td>cannotUnscrewMsg</td><td></td></tr>
+<tr><td><a name="UnscrewWith"></a>UnscrewWith</td><td>dobj</td><td>isUnscrewable = isScrewable</td><td>cannotUnscrewMsg</td><td></td></tr>
+<tr><td></td><td>iobj</td><td>canUnscrewWithMe = canScrewWithMe</td><td>cannotUnscrewWithMsg</td><td></td></tr>
+
+<tr><td><strong><a name="aV">V</a></strong></td></tr>
+<tr><td><a name="VagueTravel"></a>VagueTravel</td><td> &mdash;</td><td></td><td></td><td>DMsg(vague travel)</td></tr></tr>
+<tr><td><a name="Verbose"></a><span class="system">Verbose</span></td><td>&mdash;</td><td></td><td></td><td>gameMain.verbose = true</td></tr>
+<tr><td><a name="Version"></a><span class="system">Version</span></td><td>&mdash;</td><td></td><td></td><td>foreach ModuleID.showVersion()</td></tr>
+
+<tr><td><strong><a name="aW">W</a></strong></td></tr>
+<tr><td><a name="Wait"></a>Wait</td></td><td> &mdash;</td><td><td></td></td><td>DMsg(wait)</td></tr>
+<tr><td><a name="Wear"></a>Wear</td><td>dobj</td><td>isWearable = true</td><td>cannotWearMsg</td><td>makeWorn(true)</td></tr>
+<tr><td><a name="Write"></a>Write</td><td> &mdash;</td><td></td><td></td><td>askForIobj(WriteOn)</td></tr>
+<tr><td><a name="WriteOn"></a>WriteOn</td><td>dobj</td><td>canWriteOnMe = nil</td><td>cannotWriteOnMsg</td><td></td></tr>
+
+<tr><td><strong><a name="aY">Y</a></strong></td></tr>
+<tr><td><a name="Yell"></a>Yell</td></td><td> &mdash;</td><td><td></td></td><td>DMsg(yell)</td></tr>
+</tbody>
+</table>
+
+
+</div>
+<hr class="navb"><div class="navb">
+<i>adv3Lite Library Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="action.htm">Actions</a> &gt; 
+Action Reference
+<br><span class="navnp"><a class="nav" href="debug.htm"><i>Prev:</i> Debugging Commands</a> &nbsp;&nbsp;&nbsp;  <i>Next:</i> <a class="nav" href="actor.htm">Actors</a> &nbsp;&nbsp;&nbsp;</span>
+
+</div>
+</body>
+</html>

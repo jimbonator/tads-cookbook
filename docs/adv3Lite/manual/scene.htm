@@ -1,0 +1,117 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Optional Modules &mdash; Scenes</title>
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="optional.htm">Optional Modules</a> &gt; 
+Scenes
+<br><span class="navnp"><a class="nav" href="hint.htm"><i>Prev:</i> Pathfinding</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="score.htm"><i>Next:</i> Scoring</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+<h1>Scenes</h1>
+<p>The scenes.t module is used to implement Scenes, which are somewhat similar to their Inform 7 counterpart. A Scene is mainly a way of checking whether a particular phase of your interactive story is currently in progress or has already occurred, and can be used to control how some other aspects of the game work (for example a <a href="doer">Doer</a> can be conditional on a certain scene being in progress). To set up a scene, simply define an object of class <b>Scene</b> with the following properties:</p>
+
+<ul>
+<li><b>startsWhen</b>: an expression or method that evaluates to true when you want the scene to start.</li>
+<li><b>endsWhen</b>: an expression or method that evaluates to something other than nil when you want the scene to end. Often you would simply make this return true when you want the scene to end, but if you wanted to note different kinds of scene ending you could return some other value (which could be a number, a single-quoted string, an enum or an object) to represent how the scene ends.</li>
+<li><b>recurring</b>: Normally a scene will only occur once. Set recurring to true if you want the scene to start again every time its startsWhen condition is true.</li>
+<li><b>whenStarting</b>: A method that executes when the scene starts; you can use it to define what happens at the start of the scene.</li>
+<li><b>whenEnding</b>: A method that executes when the scene ends; you can use it to define what happens at the end of the scene.</li>
+<li><b>eachTurn</b>: A method that executes every turn that the scene is active.</li>
+<li><strong>beforeAction</strong>: A method that executes on every active scene just before an action is about to take place. This method can veto the action with the <span class="code">exit</span> macro.</li>
+<li><strong>afterAction</strong>: A method that executes on every active scene just after an action has taken place (and so can be used to provide an appropriate response to the action during the scene).</li>
+</ul>
+
+<p>In addition your code can query the following properties of a Scene object (which should be treated as read-only by game-code since they're updated by library code):</p>
+
+<ul>
+<li><b>isHappening</b>: Flag (true or nil) to indicate whether this scene is currently taking place.</li>
+<li><b>hasHappened</b>: Flag (true or nil) to indicate whether this scene has ever happened (and ended).</li>
+<li><b>startedAt</b>: The turn number at which this scene started (or nil if this scene is yet to happen).</li>
+<li><b>endedAt</b>: The turn number at which this scene ended (or nil if this scene is yet to end).</li>
+<li><b>timesHappened</b>: The number of times this scene has happened.</li>
+<li><b>howEnded</b>: An optional author-defined flag indicating how the scene ended (this could be a number, a single-quoted string, an enum or an object).
+</ul>
+
+<p>The <b>howEnded</b> property perhaps deserves a further word of explanation. You can use this more or less how you like, but one coding pattern might be to use custom objects to represent different endings and then make use of the methods and properties of your custom objects. For example, suppose a certain scene ends tragically if Martha is dead but happily if you give Martha the gold ring, you might do something like this:</p>
+
+<p><div class=code><pre>
+class SceneEnding: object
+   whenEnding() { }
+;
+
+happyEnding: SceneEnding
+   whenEnding() { "A surge of happiness washes over you..."; }
+;
+
+tragicEnding: SceneEnding
+   whenEnding() { "You feel inconsolable at your loss..."; }
+;
+
+marthaScene: Scene
+   startsWhen = Q.canSee(me, martha)
+   
+   endsWhen()
+   {
+        if(martha.isDead)
+           return tragicEnding;
+		 
+        if(goldRing.isIn(martha))
+           return happyEnding;
+		 
+        return nil;		 
+   }
+   
+   whenEnding() 
+   {
+      if(howEnded != nil)
+         howEnded.whenEnding();
+   }
+;
+</pre></div>
+
+<p>One special point to note: if you define the startsWhen condition of a Scene so that it is true right at the start of play (e.g. <span class="code">startsWhen = true</span>), the Scene will indeed start out active, but its <span class="code">whenStarting()</span> method will execute just <em>after</em> the first room description is displayed. If you want it to display something just after, you can use its whenStarting method to display some text, e.g.:</p>
+
+ <p><div class="code"><pre>
+ introScene: Scene
+    startsWhen = (harry.isIn(harrysBed))
+    endsWhen = (!harry.isIn(harrysBed))
+    
+    
+    whenEnding()
+    {
+        "Harry stretches and yawns, before staggering uncertainly across the
+        room. ";
+    }
+   
+    whenStarting = "Harry groans. "    
+;
+ 
+ </pre></div>
+
+<p>This is normally what you would want, but note that this means that you can't use a Scene to display any text prior to the first room description. For that purpose you need to use an <a href="beginning.htm#tenses">InitObject</a> or the showIntro() method of <a href="beginning.htm#gamemain">gameMain</a>.</p> 
+<br>
+
+<h2>Keeping Track of <a name="time_idx">Time</a></h2>
+
+<p>In a sense, Scenes can be said to divide your game into different times just as Rooms and Regions divide it into different places, but Scenes don't actually keep track of time (in the sense of the date or the time of day). If your game needs to do this you may want to look at either the <a href="../../extensions/docs/subtime.htm">Subjective Time</a> extensions or the <a href="../../extensions/docs/objtime.htm">Objective Time</a> extension. The first of these allows you to define the time at which certain events (which could well include the beginning and end of certain Scenes) occur. If the player character then occasionally consults a clock or watch, the subjective time extension can then report a suitable time of day (based on the number of terms elapsed since the last event, the time attached to the next event, and a number of other factors). This extension is not suitable, however, if you want a frequent or continuous display of the time of day (in the status line, for example); for that purpose you should use the objective time extension which advances the clock by so many seconds per turn (the actual number of seconds can be customized in as fine a grained manner as you wish, e.g. to differ for different actions).</p>
+
+
+
+<hr class="navb"><div class="navb">
+<i>adv3Lite Library Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="optional.htm">Optional Modules</a> &gt; 
+Scenes
+<br><span class="navnp"><a class="nav" href="pathfind.htm"><i>Prev:</i> Pathfinding</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="score.htm"><i>Next: </i>Scoring </a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>
