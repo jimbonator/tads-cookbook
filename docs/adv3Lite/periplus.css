@@ -1,0 +1,33 @@
+/*
+ * periplus css
+ * Designed to cascade under the standard libref.css
+ */
+
+body {
+  font-family: Lato, Roboto, OpenSans, Verdana, Arial, sans-serif;
+  font-size: 11pt;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ul {
+  line-height: 1.5;
+}
+
+#idx {
+  font-size: 10pt;
+}
+
+#idx ul {
+  line-height: 1.25;
+}
+
+footer {
+  text-align: right
+}
+
+code {
+  font-family: Source Code Pro, Roboto Mono, monospace;
+}
