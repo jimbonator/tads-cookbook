@@ -22,14 +22,15 @@ $topics = [
     'Button',
     'Decoration', [
       'Distant',
-      'Heavy',
       'Unthing',
     ],
     'Fixture', [
       'Component',
     ],
     'Food',
-    'Immovable',
+    'Immovable', [
+      'Heavy',
+    ],
     'Wearable'
   ], [
     'Things' => 'manual/thing.htm',
