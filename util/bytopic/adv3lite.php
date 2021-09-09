@@ -19,7 +19,6 @@ $topics = [
 
   new Topic('Tangibles', 'Thing', [
     'Thing',
-    'Button',
     'Decoration', [
       'Distant',
       'Unthing',
@@ -77,6 +76,7 @@ $topics = [
   ]),
 
   new Topic('Gadgetry', '', [
+    'Button',
     'Key',
     'Lever',
     'Settable', [
@@ -224,5 +224,7 @@ $topics = [
     'PreinitObject',
     'PreRestartObject',
     'PreSaveObject',
+  ], [
+    'Q: The general-purpose query object' => 'libref/source/query.t.html#14'
   ]),
 ];
