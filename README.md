@@ -12,4 +12,5 @@ The wiki and code samples are intended to be brief, and not full-fledged tutoria
 
 * [TADS](https://www.tads.org/) - TADS is a free authoring system for writing your own interactive fiction
 * [TADS 3 Bookshelf](https://www.tads.org/t3doc/doc/index.htm) - Quick starts, tutorials, technical manuals
+* [adv3Lite periplus](https://jimbonator.github.io/tads-cookbook/adv3Lite/) - library reference organized by categories and subject matter
 * [TADS at The Interactive Fiction Community Forum](https://intfiction.org/c/authoring/tads/20)
