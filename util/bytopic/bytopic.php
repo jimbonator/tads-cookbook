@@ -162,7 +162,7 @@ if ($argv[2] == 'toc') {
   echo "<ul>\n";
   foreach ($topics as $topic) {
     $fragment = "topics.html#{$topic->fragment}";
-    echo "<li><a href='$fragment' target='topics'>{$topic->title}</a></li>\n";
+    echo "<li><a href='$fragment' target='topics'>{$esc($topic->title)}</a></li>\n";
   }
   echo "</ul>\n";
 } else if ($argv[2] == 'topics') {
