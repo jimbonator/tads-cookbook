@@ -8,7 +8,6 @@ $topics = [
     'Achievement',
     'FinishOption',
     'FinishType',
-    'Goal',
   ], [
     'A minimal game definition' => 'manual/mingame.htm',
     'Beginnings' => 'manual/beginning.htm',
@@ -205,17 +204,18 @@ $topics = [
     'SenseRegion' => 'manual/senseregion.htm',
   ]),
 
-  new Topic('Hints & menus', '', [
+  new Topic('Hints, goals & menus', '', [
     'Hint',
     'ExtraHint',
     'HintMenu',
+    'Goal',
     '---',
     'MenuItem',
     'MenuTopicItem',
     'MenuLongTopicItem',
   ], [
     'Menus' => 'manual/menu.htm',
-    'Hints' => 'manual/hint.htm',
+    'Hints, goals, extra hints' => 'manual/hint.htm',
   ]),
 
   new Topic('System', '', [
