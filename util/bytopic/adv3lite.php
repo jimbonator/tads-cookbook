@@ -12,7 +12,7 @@ $topics = [
     'A minimal game definition' => 'manual/mingame.htm',
     'Beginnings' => 'manual/beginning.htm',
     'Endings' => 'manual/ending.htm',
-    'IFID generator' => 'http://www.tads.org/ifidgen/ifidgen',
+    'IFID generator' => 'https://www.tads.org/ifidgen/ifidgen',
     'Scoring' => 'manual/score.htm',
   ]),
 
@@ -64,12 +64,12 @@ $topics = [
 
   new Topic('Text, HTML, & multimedia', '', [
   ], [
-    'Escaped characters (backslash codes)' => 'http://www.tads.org/t3doc/doc/sysman/strlit.htm#specials',
-    'Embedded expressions' => 'http://www.tads.org/t3doc/doc/sysman/strlit.htm#embeddings',
-    'Embedded string templates' => 'http://www.tads.org/t3doc/doc/sysman/strlit.htm#strtpl',
-    'Introduction to HTML TADS' => 'http://www.tads.org/t3doc/doc/htmltads/intro.htm',
-    'Regular expressions' => 'http://www.tads.org/t3doc/doc/sysman/regex.htm',
-    'String methods' => 'http://www.tads.org/t3doc/doc/sysman/string.htm'
+    'Escaped characters (backslash codes)' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#specials',
+    'Embedded expressions' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#embeddings',
+    'Embedded string templates' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#strtpl',
+    'Introduction to HTML TADS' => 'https://www.tads.org/t3doc/doc/htmltads/intro.htm',
+    'Regular expressions' => 'https://www.tads.org/t3doc/doc/sysman/regex.htm',
+    'String methods' => 'https://www.tads.org/t3doc/doc/sysman/string.htm'
   ]),
 
   new Topic('Containers & surfaces', 'Container', [
