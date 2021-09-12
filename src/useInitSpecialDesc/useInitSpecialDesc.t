@@ -10,12 +10,8 @@ fnortiner: Thing 'a fnortiner' 'fnortiner' @kitchen
 
   // introduction initSpecialDesc, printed only the first time the item is listed
   // in the room's inventory
-  introduced = nil
-  useInitSpecialDesc = !introduced
-  initSpecialDesc {
-    "Wow!  On the floor is a dual-overhead oscillating fnortiner!  ";
-    introduced = true;
-  }
+  useInitSpecialDesc = !seen
+  initSpecialDesc = "Wow!  On the floor is a dual-overhead oscillating fnortiner!  "
 
   // custom description printed thereafter
   specialDesc = "Meh.  A fnortiner is here.  "
