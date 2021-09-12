@@ -1,4 +1,10 @@
 -D LANGUAGE=en_us
 -D MESSAGESTYLE=neu
+-d
+-we
+-FC
+-Fy obj
+-Fo obj
+-I src
 -lib system
 -lib adv3/adv3
