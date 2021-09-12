@@ -62,6 +62,16 @@ $topics = [
     'Exits' => 'manual/exit.htm',
   ]),
 
+  new Topic('Text, HTML, & multimedia', '', [
+  ], [
+    'Escaped characters (backslash codes)' => 'http://www.tads.org/t3doc/doc/sysman/strlit.htm#specials',
+    'Embedded expressions' => 'http://www.tads.org/t3doc/doc/sysman/strlit.htm#embeddings',
+    'Embedded string templates' => 'http://www.tads.org/t3doc/doc/sysman/strlit.htm#strtpl',
+    'Introduction to HTML TADS' => 'http://www.tads.org/t3doc/doc/htmltads/intro.htm',
+    'Regular expressions' => 'http://www.tads.org/t3doc/doc/sysman/regex.htm',
+    'String methods' => 'http://www.tads.org/t3doc/doc/sysman/string.htm'
+  ]),
+
   new Topic('Containers & surfaces', 'Container', [
     'Container', [
       'OpenableContainer',
