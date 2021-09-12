@@ -65,15 +65,19 @@ class Topic
     echo "<h2 id='{$this->fragment}'>{$esc($this->title)} $top </h2>\n";
 
     if (!empty($this->extra))
-      $this->emitExtras();
+      $this->emitExtras($this->extra);
 
     $this->emitEntry($this->classes);
   }
 
-  private function emitExtras() {
+  private function emitExtras($extra) {
     echo "<ul>\n";
-    foreach ($this->extra as $text => $url)
-      $this->emitListItem($text, $url, '<i>', '</i>');
+    foreach ($extra as $text => $url) {
+      if (is_string($url))
+        $this->emitListItem($text, $url, '<i>', '</i>');
+      else
+        $this->emitExtras($url);
+    }
     echo "</ul>\n";
   }
 

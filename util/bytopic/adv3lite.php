@@ -66,7 +66,10 @@ $topics = [
   ], [
     'Escaped characters (backslash codes)' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#specials',
     'Embedded expressions' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#embeddings',
-    'Embedded string templates' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#strtpl',
+    'Embedded string templates' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#strtpl', [
+      '<<one of>>' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#oneof',
+      '<<first time>>' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#firstTimeOnly',
+    ],
     'Introduction to HTML TADS' => 'https://www.tads.org/t3doc/doc/htmltads/intro.htm',
     'Regular expressions' => 'https://www.tads.org/t3doc/doc/sysman/regex.htm',
     'String methods' => 'https://www.tads.org/t3doc/doc/sysman/string.htm'
