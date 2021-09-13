@@ -13,7 +13,7 @@ gameMain: GameMainDef
 versionInfo: GameID
 ;
 
-kitchen: Room 'Kitchen'
+kitchen: Room 'Kitchen' 'a kitchen'
 ;
 
 me: Actor
