@@ -178,6 +178,7 @@ $topics = [
       'DefaultAskTellTopic',
       'DefaultAskTopic',
       'DefaultCommandTopic',
+      'DefaultConversationTopic',
       'DefaultGiveShowTopic',
       'DefaultGiveTopic',
       'DefaultQueryTopic',
