@@ -173,6 +173,12 @@ $topics = [
       'TellTalkShowTopic',
       'TellTopic',
     ],
+    '!Conversations', [
+      'ConvNode',
+      'ConvAgendaItem',
+      'NodeContinuationTopic',
+      'NodeEndCheck',
+    ],
     '!Default topic handling', [
       'DefaultAnyTopic',
       'DefaultAgendaTopic',
