@@ -129,7 +129,10 @@ $topics = [
     'Actor',
     'ActorState',
     'ActorTopicEntry',
-    'AgendaItem',
+    'AgendaItem', [
+      'ConvAgendaItem',
+      'DelayedAgendaItem',
+    ],
     '!Greetings', [
       'ActorHelloTopic',
       'ActorByeTopic',
