@@ -133,6 +133,7 @@ $topics = [
       'ConvAgendaItem',
       'DelayedAgendaItem',
     ],
+    'InitiateTopic',
     '!Greetings', [
       'ActorHelloTopic',
       'ActorByeTopic',
