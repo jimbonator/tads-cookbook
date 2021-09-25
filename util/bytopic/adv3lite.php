@@ -72,7 +72,8 @@ $topics = [
     ],
     'Introduction to HTML TADS' => 'https://www.tads.org/t3doc/doc/htmltads/intro.htm',
     'Regular expressions' => 'https://www.tads.org/t3doc/doc/sysman/regex.htm',
-    'String methods' => 'https://www.tads.org/t3doc/doc/sysman/string.htm'
+    'String methods' => 'https://www.tads.org/t3doc/doc/sysman/string.htm',
+    'aHref()' => 'libref/file/console.t.html#aHref',
   ]),
 
   new Topic('Containers & surfaces', 'Container', [
@@ -268,6 +269,11 @@ $topics = [
     'PreRestartObject',
     'PreSaveObject',
   ], [
-    'Q: The general-purpose query object' => 'libref/source/query.t.html#14'
+    'Q: The general-purpose query object' => 'libref/source/query.t.html#14',
+    '---' => '',
+    'General functions' => 'libref/file/tadsgen.h.html',
+    'Misc. functions' => 'libref/file/misc.t.html',
+    'I/O & banner API' => 'libref/file/tadsio.h.html',
+    'English language module' => 'libref/file/english.t.html',
   ]),
 ];
