@@ -208,8 +208,11 @@ $topics = [
 
   new Topic('Consultables & knowledge', 'Consultable', [
     'Consultable',
-    'Topic',
+    'ConsultTopic',
+    'DefaultConsultTopic',
     'Thought',
+    'DefaultThought',
+    'ThoughtManager',
   ], [
     'Topics' => 'manual/topic.htm',
     'Topic Entries' => 'manual/topicentry.htm',
