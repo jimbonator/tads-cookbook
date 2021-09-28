@@ -207,6 +207,7 @@ $topics = [
   ]),
 
   new Topic('Consultables & knowledge', 'Consultable', [
+    'Topic',
     'Consultable',
     'ConsultTopic',
     'DefaultConsultTopic',
