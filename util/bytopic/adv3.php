@@ -256,7 +256,7 @@ $topics = [
     'Footnote',
   ]),
 
-  new Adv3Topic('Events & scenes', '', [
+  new Adv3Topic('Events', '', [
     'Daemon', [
       'SenseDaemon',
     ],
