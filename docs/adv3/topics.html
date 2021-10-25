@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>adv3 periplus</title>
+  <link rel=stylesheet type='text/css' href='https://www.tads.org/t3doc/doc/libref/libref.css'>
+  <link rel=stylesheet type='text/css' href='../periplus.css'>
+</head>
+<body id='idx'>
+<h2 id='topic_0'>Game <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/averysimplegame.htm' target='classes'>A very simple game</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/startinganewgame.htm' target='classes'>Starting a new game</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/rewardingtheeffort.htm' target='classes'>Rewarding the effort</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/endingthegame.htm' target='classes'>Ending the game</a></i></li>
+<li><i><a href='https://www.tads.org/ifidgen/ifidgen' target='classes'>IFID generator</a></i></li>
+</ul>
+<ul>
+<li><b><code><a href='https://www.tads.org/t3doc/doc/libref/object/GameID.html' target='classes'>GameID</a></code></b></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/GameMainDef.html' target='classes'>GameMainDef</a></code></li>
+</ul><ul><li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Achievement.html' target='classes'>Achievement</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/FinishOption.html' target='classes'>FinishOption</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/FinishType.html' target='classes'>FinishType</a></code></li>
+</ul>
+<h2 id='topic_1'>Tangibles <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/addingitemstothegame.htm' target='classes'>Adding items to the game</a></i></li>
+</ul>
+<ul>
+<li><b><code><a href='https://www.tads.org/t3doc/doc/libref/object/Thing.html' target='classes'>Thing</a></code></b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Hidden.html' target='classes'>Hidden</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Decoration.html' target='classes'>Decoration</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Distant.html' target='classes'>Distant</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Unthing.html' target='classes'>Unthing</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Intangible.html' target='classes'>Intangible</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Fixture.html' target='classes'>Fixture</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Component.html' target='classes'>Component</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SecretFixture.html' target='classes'>SecretFixture</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Food.html' target='classes'>Food</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Immovable.html' target='classes'>Immovable</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Heavy.html' target='classes'>Heavy</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/LightSource.html' target='classes'>LightSource</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Vaporous.html' target='classes'>Vaporous</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Vehicle.html' target='classes'>Vehicle</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Wearable.html' target='classes'>Wearable</a></code></li>
+</ul>
+<h2 id='topic_2'>Locations &amp; travel <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/definingourfirstroom.htm' target='classes'>Defining our first room</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/basictravel.htm' target='classes'>Basic travel</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/doorsandwindows.htm' target='classes'>Doors and windows</a></i></li>
+</ul>
+<ul>
+<li><b><code><a href='https://www.tads.org/t3doc/doc/libref/object/Room.html' target='classes'>Room</a></code></b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DarkRoom.html' target='classes'>DarkRoom</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/FloorlessRoom.html' target='classes'>FloorlessRoom</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/HighNestedRoom.html' target='classes'>HighNestedRoom</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/NestedRoom.html' target='classes'>NestedRoom</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/OutdoorRoom.html' target='classes'>OutdoorRoom</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ShipboardRoom.html' target='classes'>ShipboardRoom</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Booth.html' target='classes'>Booth</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Door.html' target='classes'>Door</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SecretDoor.html' target='classes'>SecretDoor</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/HiddenDoor.html' target='classes'>HiddenDoor</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/AutoClosingDoor.html' target='classes'>AutoClosingDoor</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ContainerDoor.html' target='classes'>ContainerDoor</a></code></li>
+</ul>
+<li><b>Enter/Exit</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Enterable.html' target='classes'>Enterable</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/EntryPortal.html' target='classes'>EntryPortal</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Exitable.html' target='classes'>Exitable</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ExitPortal.html' target='classes'>ExitPortal</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Floor.html' target='classes'>Floor</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Floorless.html' target='classes'>Floorless</a></code></li>
+<li><b>Multiples</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/MultiLoc.html' target='classes'>MultiLoc</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/MultiInstance.html' target='classes'>MultiInstance</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/MultiFaceted.html' target='classes'>MultiFaceted</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Passage.html' target='classes'>Passage</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/PathPassage.html' target='classes'>PathPassage</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ExitOnlyPassage.html' target='classes'>ExitOnlyPassage</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/StairwayDown.html' target='classes'>StairwayDown</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/StairwayUp.html' target='classes'>StairwayUp</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/TravelBarrier.html' target='classes'>TravelBarrier</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/TravelConnector.html' target='classes'>TravelConnector</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DistanceConnector.html' target='classes'>DistanceConnector</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DeadEndConnector.html' target='classes'>DeadEndConnector</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/FakeConnector.html' target='classes'>FakeConnector</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/FakeDestination.html' target='classes'>FakeDestination</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/OneWayRoomConnector.html' target='classes'>OneWayRoomConnector</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Direction.html' target='classes'>Direction</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/CompassDirection.html' target='classes'>CompassDirection</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RelativeDirection.html' target='classes'>RelativeDirection</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ShipboardDirection.html' target='classes'>ShipboardDirection</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/VerticalDirection.html' target='classes'>VerticalDirection</a></code></li>
+</ul>
+</ul>
+<h2 id='topic_3'>Text, HTML, &amp; multimedia <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/sysman/strlit.htm#specials' target='classes'>Escaped characters (backslash codes)</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/sysman/strlit.htm#embeddings' target='classes'>Embedded expressions</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/sysman/strlit.htm#strtpl' target='classes'>Embedded string templates</a></i></li>
+<ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/sysman/strlit.htm#oneof' target='classes'>&lt;&lt;one of&gt;&gt;</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/sysman/strlit.htm#firstTimeOnly' target='classes'>&lt;&lt;first time&gt;&gt;</a></i></li>
+</ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/htmltads/intro.htm' target='classes'>Introduction to HTML TADS</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/sysman/regex.htm' target='classes'>Regular expressions</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/sysman/string.htm' target='classes'>String methods</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/libref/file/console.t.html#aHref' target='classes'>aHref()</a></i></li>
+</ul>
+<ul>
+</ul>
+<h2 id='topic_4'>Containers &amp; surfaces <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><b><code><a href='https://www.tads.org/t3doc/doc/libref/object/Container.html' target='classes'>Container</a></code></b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/OpenableContainer.html' target='classes'>OpenableContainer</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/KeyedContainer.html' target='classes'>KeyedContainer</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/LockableContainer.html' target='classes'>LockableContainer</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/OutOfReach.html' target='classes'>OutOfReach</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Bed.html' target='classes'>Bed</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Chair.html' target='classes'>Chair</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/BagOfHolding.html' target='classes'>BagOfHolding</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Platform.html' target='classes'>Platform</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RearContainer.html' target='classes'>RearContainer</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RearSurface.html' target='classes'>RearSurface</a></code></li>
+</ul>
+<li><b>Restricted</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RestrictedContainer.html' target='classes'>RestrictedContainer</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RestrictedRearContainer.html' target='classes'>RestrictedRearContainer</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RestrictedRearSurface.html' target='classes'>RestrictedRearSurface</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RestrictedSurface.html' target='classes'>RestrictedSurface</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RestrictedUnderside.html' target='classes'>RestrictedUnderside</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ContainerDoor.html' target='classes'>ContainerDoor</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Surface.html' target='classes'>Surface</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Underside.html' target='classes'>Underside</a></code></li>
+</ul>
+<h2 id='topic_5'>Gadgetry <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Button.html' target='classes'>Button</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Key.html' target='classes'>Key</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Keyring.html' target='classes'>Keyring</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Lockable.html' target='classes'>Lockable</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/LockableContainer.html' target='classes'>LockableContainer</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/LockableWithKey.html' target='classes'>LockableWithKey</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Lever.html' target='classes'>Lever</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SpringLever.html' target='classes'>SpringLever</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Settable.html' target='classes'>Settable</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Dial.html' target='classes'>Dial</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/LabeledDial.html' target='classes'>LabeledDial</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/NumberedDial.html' target='classes'>NumberedDial</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Switch.html' target='classes'>Switch</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Flashlight.html' target='classes'>Flashlight</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Candle.html' target='classes'>Candle</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Matchbook.html' target='classes'>Matchbook</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Matchstick.html' target='classes'>Matchstick</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Dispenser.html' target='classes'>Dispenser</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Dispensable.html' target='classes'>Dispensable</a></code></li>
+</ul>
+</ul>
+<h2 id='topic_6'>Attachables <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Attachable.html' target='classes'>Attachable</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/NearbyAttachable.html' target='classes'>NearbyAttachable</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/PermanentAttachment.html' target='classes'>PermanentAttachment</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/PlugAttachable.html' target='classes'>PlugAttachable</a></code></li>
+</ul>
+<h2 id='topic_7'>Actions &amp; verbs <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/controllingtheaction.htm' target='classes'>Controlling the action</a></i></li>
+</ul>
+<ul>
+<li><b><code><a href='https://www.tads.org/t3doc/doc/libref/object/Action.html' target='classes'>Action</a></code></b></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SystemAction.html' target='classes'>SystemAction</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/TAction.html' target='classes'>TAction</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/TIAction.html' target='classes'>TIAction</a></code></li>
+</ul>
+<h2 id='topic_8'>Actors, NPCs, &amp; conversations <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/abasicburner.htm' target='classes'>A basic burner</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/gsg/theartofconversation.htm' target='classes'>The art of conversation</a></i></li>
+</ul>
+<ul>
+<li><b><code><a href='https://www.tads.org/t3doc/doc/libref/object/Actor.html' target='classes'>Actor</a></code></b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Person.html' target='classes'>Person</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ActorState.html' target='classes'>ActorState</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/AgendaItem.html' target='classes'>AgendaItem</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ConvAgendaItem.html' target='classes'>ConvAgendaItem</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DelayedAgendaItem.html' target='classes'>DelayedAgendaItem</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/InitiateTopic.html' target='classes'>InitiateTopic</a></code></li>
+<li><b>Greetings</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ActorHelloTopic.html' target='classes'>ActorHelloTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ActorByeTopic.html' target='classes'>ActorByeTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/BoredByeTopic.html' target='classes'>BoredByeTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ByeTopic.html' target='classes'>ByeTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/HelloTopic.html' target='classes'>HelloTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/LeaveByeTopic.html' target='classes'>LeaveByeTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/TellTopic.html' target='classes'>TellTopic</a></code></li>
+</ul>
+<li><b>Requests</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/AskAboutForTopic.html' target='classes'>AskAboutForTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/AskForTopic.html' target='classes'>AskForTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/AskTellGiveShowTopic.html' target='classes'>AskTellGiveShowTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/AskTellShowTopic.html' target='classes'>AskTellShowTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/AskTellTopic.html' target='classes'>AskTellTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/AskTopic.html' target='classes'>AskTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/CommandTopic.html' target='classes'>CommandTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/GiveTopic.html' target='classes'>GiveTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/GiveShowTopic.html' target='classes'>GiveShowTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ShowTopic.html' target='classes'>ShowTopic</a></code></li>
+</ul>
+<li><b>Q &amp; A</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/YesNoTopic.html' target='classes'>YesNoTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/YesTopic.html' target='classes'>YesTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/NoTopic.html' target='classes'>NoTopic</a></code></li>
+</ul>
+<li><b>Conversations</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ConvNode.html' target='classes'>ConvNode</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ConvAgendaItem.html' target='classes'>ConvAgendaItem</a></code></li>
+</ul>
+<li><b>Default topic handling</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultAnyTopic.html' target='classes'>DefaultAnyTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultAskForTopic.html' target='classes'>DefaultAskForTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultAskTellTopic.html' target='classes'>DefaultAskTellTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultAskTopic.html' target='classes'>DefaultAskTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultCommandTopic.html' target='classes'>DefaultCommandTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultGiveShowTopic.html' target='classes'>DefaultGiveShowTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultGiveTopic.html' target='classes'>DefaultGiveTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultShowTopic.html' target='classes'>DefaultShowTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultTellTopic.html' target='classes'>DefaultTellTopic</a></code></li>
+</ul>
+</ul>
+<h2 id='topic_9'>Consultables &amp; knowledge <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Topic.html' target='classes'>Topic</a></code></li>
+<li><b><code><a href='https://www.tads.org/t3doc/doc/libref/object/Consultable.html' target='classes'>Consultable</a></code></b></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ConsultTopic.html' target='classes'>ConsultTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/DefaultConsultTopic.html' target='classes'>DefaultConsultTopic</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Footnote.html' target='classes'>Footnote</a></code></li>
+</ul>
+<h2 id='topic_10'>Events &amp; scenes <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Daemon.html' target='classes'>Daemon</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SenseDaemon.html' target='classes'>SenseDaemon</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/EventList.html' target='classes'>EventList</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/CyclicEventList.html' target='classes'>CyclicEventList</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ExternalEventList.html' target='classes'>ExternalEventList</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RandomEventList.html' target='classes'>RandomEventList</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/ShuffledEventList.html' target='classes'>ShuffledEventList</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/StopEventList.html' target='classes'>StopEventList</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SyncEventList.html' target='classes'>SyncEventList</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Fuse.html' target='classes'>Fuse</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SenseFuse.html' target='classes'>SenseFuse</a></code></li>
+</ul>
+<li><b>Real-time</b></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RealTimeDaemon.html' target='classes'>RealTimeDaemon</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RealTimeEvent.html' target='classes'>RealTimeEvent</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RealTimeFuse.html' target='classes'>RealTimeFuse</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RealTimeSenseDaemon.html' target='classes'>RealTimeSenseDaemon</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/RealTimeSenseFuse.html' target='classes'>RealTimeSenseFuse</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Schedulable.html' target='classes'>Schedulable</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/OneTimePromptDaemon.html' target='classes'>OneTimePromptDaemon</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/PromptDaemon.html' target='classes'>PromptDaemon</a></code></li>
+</ul>
+<h2 id='topic_11'>Sensory <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Noise.html' target='classes'>Noise</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SimpleNoise.html' target='classes'>SimpleNoise</a></code></li>
+</ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Odor.html' target='classes'>Odor</a></code></li>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/SimpleOdor.html' target='classes'>SimpleOdor</a></code></li>
+</ul>
+</ul>
+<h2 id='topic_12'>Hints, goals &amp; menus <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Hint.html' target='classes'>Hint</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/HintMenu.html' target='classes'>HintMenu</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Goal.html' target='classes'>Goal</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Tip.html' target='classes'>Tip</a></code></li>
+</ul><ul><li><code><a href='https://www.tads.org/t3doc/doc/libref/object/MenuItem.html' target='classes'>MenuItem</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/MenuTopicItem.html' target='classes'>MenuTopicItem</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/MenuLongTopicItem.html' target='classes'>MenuLongTopicItem</a></code></li>
+</ul>
+<h2 id='topic_13'>System <a href='#top' style='font-size: small'>[top]</a>
+ </h2>
+<ul>
+<li><i><a href='https://www.tads.org/t3doc/doc/libref/file/tadsgen.h.html' target='classes'>General functions</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/libref/file/misc.t.html' target='classes'>Misc. functions</a></i></li>
+<li><i><a href='https://www.tads.org/t3doc/doc/libref/file/tadsio.h.html' target='classes'>I/O &amp; banner API</a></i></li>
+</ul>
+<ul>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/InitObject.html' target='classes'>InitObject</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/Object.html' target='classes'>Object</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/PreinitObject.html' target='classes'>PreinitObject</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/PreRestartObject.html' target='classes'>PreRestartObject</a></code></li>
+<li><code><a href='https://www.tads.org/t3doc/doc/libref/object/PreSaveObject.html' target='classes'>PreSaveObject</a></code></li>
+</ul>
+
+</body>
+</html>

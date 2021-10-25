@@ -14,8 +14,6 @@
  * The `<library file>` is another PHP script containing a single `$topics`
  * array which structures the sections and links.  See adv3lite.php for a
  * working example.
- *
- * Future plans are to produce a adv3.php for the standard adv3 library.
  */
 
 function esc(string $text): string
@@ -124,20 +122,6 @@ class Topic
   }
 }
 
-function head($title) {
-  global $esc;
-
-  echo "<!DOCTYPE html>
-<html>
-<head>
-  <title>{$esc($title)}</title>
-  <link rel=stylesheet type='text/css' href='libref/libref.css'>
-  <link rel=stylesheet type='text/css' href='periplus.css'>
-</head>
-<body id='idx'>
-";
-}
-
 function tail() {
   echo '
 </body>
@@ -149,19 +133,13 @@ function tail() {
 // out to present the topics
 include "{$argv[1]}.php";
 
-head('adv3Lite periplus');
+readfile("util/bytopic/{$argv[1]}_head.html");
+echo "<body id='idx'>\n";
 
 if ($argv[2] == 'toc') {
   // table of contents (toc) file ... this is the top-left frame
-  echo '
-  <h1>adv3Lite periplus</h1>
-  <ul>
-    <li><a href="about.html" target="classes">About this periplus</a></li>
-    <li><a href="libref/index.html" target="_blank">Complete adv3Lite class reference</a></li>
-    <li><a href="manual/toc.htm" target="_blank">adv3Lite Library manual</a></li>
-  </ul>
-  <h2 id="toc">Topics</h2>
-';
+  readfile("util/bytopic/{$argv[1]}_toc_top.html");
+  echo '  <h2 id="toc">Topics</h2>', "\n";
 
   echo "<ul>\n";
   foreach ($topics as $topic) {
