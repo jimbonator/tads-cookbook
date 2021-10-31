@@ -14,6 +14,7 @@ $topics = [
     'Endings' => 'manual/ending.htm',
     'IFID generator' => 'https://www.tads.org/ifidgen/ifidgen',
     'Scoring' => 'manual/score.htm',
+    'Treaty of Babel' => 'http://babel.ifarchive.org/babel_rev10.html',
   ]),
 
   new Topic('Tangibles', 'Thing', [
