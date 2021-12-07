@@ -100,6 +100,8 @@ $topics = [
     'Switch', [
       'Flashlight'
     ],
+    'KeyedContainer',
+    'LockableContainer',
   ], [
     'Keys' => 'manual/key.htm',
     'Gadgets' => 'manual/gadget.htm',
