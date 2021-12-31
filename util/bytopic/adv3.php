@@ -25,8 +25,8 @@ $topics = [
     'Rewarding the effort' => 'https://www.tads.org/t3doc/doc/gsg/rewardingtheeffort.htm',
     'Ending the game' => 'https://www.tads.org/t3doc/doc/gsg/endingthegame.htm',
     'IFID generator' => 'https://www.tads.org/ifidgen/ifidgen',
-    'GameInfo.txt & cover art' => 'http://www.tads.org/howto/gameinfo.htm',
-    'Treaty of Babel' => 'http://babel.ifarchive.org/babel_rev10.html',
+    'GameInfo.txt & cover art' => 'https://www.tads.org/howto/gameinfo.htm',
+    'Treaty of Babel' => 'https://babel.ifarchive.org/babel_rev10.html',
   ]),
 
   new Adv3Topic('Tangibles', 'Thing', [
