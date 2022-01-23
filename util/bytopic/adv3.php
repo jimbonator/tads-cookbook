@@ -306,14 +306,19 @@ $topics = [
   ]),
 
   new Adv3Topic('System', '', [
-    'InitObject',
     'Object',
+    '---',
+    'InitObject',
     'PreinitObject',
     'PreRestartObject',
     'PreSaveObject',
+    '---',
+    'BannerWindow'
   ], [
     'General functions' => 'https://www.tads.org/t3doc/doc/libref/file/tadsgen.h.html',
     'Misc. functions' => 'https://www.tads.org/t3doc/doc/libref/file/misc.t.html',
+    'List methods' => 'https://www.tads.org/t3doc/doc/sysman/list.htm',
     'I/O & banner API' => 'https://www.tads.org/t3doc/doc/libref/file/tadsio.h.html',
+    'English language module' => 'https://www.tads.org/t3doc/doc/libref/file/en_us.t.html',
   ]),
 ];
