@@ -65,6 +65,8 @@ $topics = [
   ]),
 
   new Topic('Text, HTML, & multimedia', '', [
+    'String',
+    'StringBuffer'
   ], [
     'Escaped characters (backslash codes)' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#specials',
     'Embedded expressions' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#embeddings',
@@ -272,6 +274,7 @@ $topics = [
 
   new Topic('System', '', [
     'Object',
+    'List',
     '---',
     'InitObject',
     'PreinitObject',
