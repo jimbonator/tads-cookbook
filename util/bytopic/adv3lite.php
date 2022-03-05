@@ -268,6 +268,7 @@ $topics = [
     'MenuTopicItem',
     'MenuLongTopicItem',
   ], [
+    'Help for New Players & playerHelper' => 'manual/newbie.htm',
     'Menus' => 'manual/menu.htm',
     'Hints, goals, extra hints' => 'manual/hint.htm',
   ]),
