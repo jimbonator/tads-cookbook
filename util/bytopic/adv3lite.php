@@ -130,6 +130,8 @@ $topics = [
   ], [
     'Actions' => 'manual/action.htm',
     'Doers' => 'manual/doer.htm',
+    'Grammar to Action' => 'manual/actionref.htm#grammar',
+    'All Actions' => 'manual/actionref.htm#actionlist',
   ]),
 
   new Topic('Actors, NPCs, & conversations', 'Actor', [
