@@ -34,6 +34,7 @@ $topics = [
     'Wearable'
   ], [
     'Things' => 'manual/thing.htm',
+    'Parsing the vocab string' => 'libref/object/LMentionable.html#initVocab',
   ]),
 
   new Topic('Locations & travel', 'Room', [
