@@ -124,6 +124,7 @@ $topics = [
 
   new Topic('Actions, verbs, & Doers', 'Action', [
     'Action',
+    'Command',
     'Doer',
     'SystemAction',
     'TAction',
