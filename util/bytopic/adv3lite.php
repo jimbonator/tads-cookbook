@@ -147,11 +147,14 @@ $topics = [
     'InitiateTopic',
     '!Greetings', [
       'ActorHelloTopic',
-      'ActorByeTopic',
-      'BoredByeTopic',
-      'ByeTopic',
       'HelloTopic',
+      'ImpHelloTopic',
+      'ActorByeTopic',
+      'ByeTopic',
+      'ImpByeTopic',
+      'HelloGoodbyeTopic',
       'LeaveByeTopic',
+      'BoredByeTopic',
     ],
     '!Requests', [
       'AskAboutForTopic',
