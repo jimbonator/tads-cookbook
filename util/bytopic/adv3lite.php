@@ -295,6 +295,7 @@ $topics = [
     '---' => '',
     'General functions' => 'libref/file/tadsgen.h.html',
     'Misc. functions' => 'libref/file/misc.t.html',
+    'Utility functions' => 'manual/utility.htm',
     'List methods' => 'https://www.tads.org/t3doc/doc/sysman/list.htm',
     'I/O & banner API' => 'libref/file/tadsio.h.html',
     'English language module' => 'libref/file/english.t.html',
