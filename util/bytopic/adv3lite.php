@@ -139,10 +139,11 @@ $topics = [
   new Topic('Actors, NPCs, & conversations', 'Actor', [
     'Actor',
     'ActorState',
-    'ActorTopicEntry',
     'AgendaItem', [
       'ConvAgendaItem',
       'DelayedAgendaItem',
+      'FollowAgendaItem',
+      'BoredomAgendaItem',
     ],
     'InitiateTopic',
     '!Greetings', [
@@ -167,6 +168,8 @@ $topics = [
       'GiveTopic',
       'GiveShowTopic',
       'ShowTopic',
+      'TalkTopic',
+      'TellTopic',
       'TellTalkShowTopic',
     ],
     '!Love & war', [
@@ -184,9 +187,9 @@ $topics = [
       'SayTopic',
       'AskTalkTopic',
       'AskTellTalkTopic',
-      'TellTalkTopic',
-      'TellTalkShowTopic',
+      'TalkTopic',
       'TellTopic',
+      'TellTalkTopic',
     ],
     '!Conversations', [
       'ConvNode',
@@ -283,11 +286,14 @@ $topics = [
   new Topic('System', '', [
     'Object',
     'List',
+    'LookupTable',
     '---',
-    'InitObject',
-    'PreinitObject',
-    'PreRestartObject',
-    'PreSaveObject',
+    '!Initialization', [
+      'InitObject',
+      'PreinitObject',
+      'PreRestartObject',
+      'PreSaveObject',
+    ],
     '---',
     'BannerWindow'
   ], [
@@ -297,6 +303,7 @@ $topics = [
     'Misc. functions' => 'libref/file/misc.t.html',
     'Utility functions' => 'manual/utility.htm',
     'List methods' => 'https://www.tads.org/t3doc/doc/sysman/list.htm',
+    'LookupTable methods' => 'https://www.tads.org/t3doc/doc/sysman/lookup.htm',
     'I/O & banner API' => 'libref/file/tadsio.h.html',
     'English language module' => 'libref/file/english.t.html',
   ]),
