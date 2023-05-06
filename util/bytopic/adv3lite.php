@@ -27,6 +27,7 @@ $topics = [
     'Fixture', [
       'Component',
     ],
+    'MultiLoc',
     'Food',
     'Immovable', [
       'Heavy',
@@ -46,6 +47,7 @@ $topics = [
     'Enterable',
     'Floor',
     'MultiLoc',
+    'Distant',
     'Passage', [
       'PathPassage',
     ],
@@ -75,6 +77,7 @@ $topics = [
       '<<one of>>' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#oneof',
       '<<first time>>' => 'https://www.tads.org/t3doc/doc/sysman/strlit.htm#firstTimeOnly',
     ],
+    'Message params tokens (English)' => 'libref/source/english.t.html#4172',
     'Introduction to HTML TADS' => 'https://www.tads.org/t3doc/doc/htmltads/intro.htm',
     'Regular expressions' => 'https://www.tads.org/t3doc/doc/sysman/regex.htm',
     'String methods' => 'https://www.tads.org/t3doc/doc/sysman/string.htm',
