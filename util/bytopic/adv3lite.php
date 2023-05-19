@@ -142,6 +142,7 @@ $topics = [
   new Topic('Actors, NPCs, & conversations', 'Actor', [
     'Actor',
     'ActorState',
+    'ActorTopicEntry',
     'AgendaItem', [
       'ConvAgendaItem',
       'DelayedAgendaItem',
@@ -227,12 +228,15 @@ $topics = [
 
   new Topic('Consultables & knowledge', 'Consultable', [
     'Topic',
+    'TopicEntry',
+    '---',
     'Consultable',
     'ConsultTopic',
     'DefaultConsultTopic',
+    '---',
+    'ThoughtManager',
     'Thought',
     'DefaultThought',
-    'ThoughtManager',
   ], [
     'Topics' => 'manual/topic.htm',
     'Topic Entries' => 'manual/topicentry.htm',
