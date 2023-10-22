@@ -32,7 +32,9 @@ $topics = [
     'Immovable', [
       'Heavy',
     ],
-    'Wearable'
+    'Wearable',
+    '---',
+    'CollectiveGroup',
   ], [
     'Things' => 'manual/thing.htm',
     'Parsing the vocab string' => 'libref/object/LMentionable.html#initVocab',
@@ -43,6 +45,7 @@ $topics = [
     'Booth',
     'Door', [
       'SecretDoor',
+      'ContainerDoor',
     ],
     'Enterable',
     'Floor',
@@ -90,10 +93,17 @@ $topics = [
       'KeyedContainer',
       'LockableContainer',
     ],
+    'ContainerDoor',
+    '---',
     'Platform',
     'RearContainer',
     'Surface',
     'Underside',
+    '---',
+    'Component',
+    'SubComponent',
+    '---',
+    'CollectiveGroup',
   ]),
 
   new Topic('Gadgetry', '', [
@@ -114,13 +124,16 @@ $topics = [
     'Gadgets' => 'manual/gadget.htm',
   ]),
 
-  new Topic('Attachables', '', [
+  new Topic('Attachables & components', '', [
     'SimpleAttachable', [
       'Attachable',
       'AttachableComponent',
       'NearbyAttachable',
     ],
     'PlugAttachable',
+    '---',
+    'Component',
+    'SubComponent',
   ], [
     'Attachables' => 'manual/attachable.htm',
   ]),
