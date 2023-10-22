@@ -318,6 +318,7 @@ $topics = [
     'BannerWindow'
   ], [
     'Q: The general-purpose query object' => 'libref/source/query.t.html#14',
+    'Built-in extensions' => 'manual/extensions.htm',
     '---' => '',
     'General functions' => 'libref/file/tadsgen.h.html',
     'Misc. functions' => 'libref/file/misc.t.html',
